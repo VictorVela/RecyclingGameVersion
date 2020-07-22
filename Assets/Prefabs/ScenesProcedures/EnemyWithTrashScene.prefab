@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8527740463721738961}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: EnemyStartPosition
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -137,7 +137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7053220082107940476}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.98, y: -0.64, z: -13.365234}
+  m_LocalPosition: {x: 0.37, y: -0.64, z: -13.365234}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7053220083956384406}
@@ -192,7 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7053220082531402620}
   - component: {fileID: 7053220082531402621}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: TrashGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -258,7 +258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7053220082609959505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.92, y: -1.71, z: -15.712891}
+  m_LocalPosition: {x: -1.57, y: -1.71, z: -15.712891}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7053220083956384406}
@@ -329,7 +329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7053220082667045104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.5, y: -0.73, z: -19.78817}
+  m_LocalPosition: {x: -10.77, y: -0.06, z: -19.78817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7053220083956384406}
@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 7053220082720921047}
   - component: {fileID: 7053220082720921046}
   - component: {fileID: 7053220082720921041}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 75
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -904,7 +904,7 @@ PrefabInstance:
     - target: {fileID: 7691224763365026412, guid: 2701b10df92d8b24da61ca612f227526,
         type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2701b10df92d8b24da61ca612f227526, type: 3}

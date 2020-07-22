@@ -6,6 +6,8 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public float timeStart;
+    public bool warningTime;
+    public int warningTimeMinute = 6;
     private bool finished = false;
     public bool playerDead = false;
     
@@ -15,6 +17,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        warningTime = false;
         timeStart = 420f;
         timer.text = timeStart.ToString();
     }
@@ -36,13 +39,20 @@ public class Timer : MonoBehaviour
             string seconds = (timeStart % 60).ToString("0");
 
             timer.text = minutes + ":" + seconds;
+            warningTime = timeWarningTest(minutes);
 
             if (seconds.Equals("0") && minutes.Equals("0"))
             {
                 finished = true;
             }
         }
+    }
 
-        
+    public bool timeWarningTest(string minutes)
+    {
+        if((int.Parse(minutes) < warningTimeMinute))
+        {
+            return true;
+        } return false;
     }
 }

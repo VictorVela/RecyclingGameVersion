@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public Transform startPlayerPosition;
     public GameObject desableSceneP;
     public GameObject startSceneP;
+    public GameObject trashCollectorPlayer;
 
     private bool isGrounded;
     private bool isMobile;
@@ -56,6 +57,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y);
+        trashCollectorPlayer.transform.position = new Vector2(transform.position.x - 16, trashCollectorPlayer.transform.position.y);
         pointsLabel.text = points.ToString();
 
         // OBJETOS PARA TRATAMENTO DE CENA SEGUIREM O PLAYER

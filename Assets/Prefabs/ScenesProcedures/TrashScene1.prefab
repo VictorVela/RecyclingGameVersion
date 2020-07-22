@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6029995701987500823}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5314173, y: -0.72, z: -19.78817}
+  m_LocalPosition: {x: -3.13, y: -0.72, z: -19.78817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6029995703710892368}
@@ -162,7 +162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6029995702344998637}
   - component: {fileID: 6029995702344998636}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: TrashGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -582,7 +582,7 @@ PrefabInstance:
     - target: {fileID: 7691224763365026412, guid: 2701b10df92d8b24da61ca612f227526,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2701b10df92d8b24da61ca612f227526, type: 3}

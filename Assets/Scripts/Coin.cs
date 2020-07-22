@@ -35,6 +35,9 @@ public class Coin : MonoBehaviour {
 
     void Update()
 	{
+		if (buttonGO)
+			print(button.pressing);
+
 		if (flyToCat && Input.GetButton("Fire1")) {
 			catDirection = - (transform.position - player.transform.position).normalized;
 			rb.velocity = new Vector2 (catDirection.x, catDirection.y) * 6f * (Time.time / timeStamp);

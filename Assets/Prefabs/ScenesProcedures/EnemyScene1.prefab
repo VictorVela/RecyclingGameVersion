@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4887664230354327882}
   - component: {fileID: 4887664230354327881}
   - component: {fileID: 4887664230354327880}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 75
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -248,7 +248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4887664230676179232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.13, y: -0.71, z: -13.365234}
+  m_LocalPosition: {x: 0.15000021, y: -0.71, z: -13.365234}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4887664230795535806}
@@ -394,7 +394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4887664231519869781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.17, y: -1.48, z: -15.712891}
+  m_LocalPosition: {x: -2.57, y: -1.48, z: -15.712891}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4887664230795535806}
@@ -448,7 +448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2609598852230313959}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: EnemyStartPosition
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1019,7 +1019,7 @@ PrefabInstance:
     - target: {fileID: 7691224763365026412, guid: 2701b10df92d8b24da61ca612f227526,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2701b10df92d8b24da61ca612f227526, type: 3}
