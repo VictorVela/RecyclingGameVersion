@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     public Timer timer;
 
     private Canvas canvas;
-
+    public bool canGenerateAlert;
 
 
     Vector3[] defaultPos;
@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
         }
 
         //backUpTransform();
-
+        canGenerateAlert = true;
     }
 
     public void GameOpen()
@@ -129,6 +129,7 @@ public class GameController : MonoBehaviour
     {
         GameObject warningScreen = GameObject.Find("WarningScreen");
         warningScreen.GetComponent<CanvasGroup>().alpha = 0;
+        canGenerateAlert = false;
     }
 
 }

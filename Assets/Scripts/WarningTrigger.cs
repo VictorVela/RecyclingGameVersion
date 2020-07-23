@@ -6,22 +6,23 @@ public class WarningTrigger : MonoBehaviour
 {
     public GameObject warningScreen;
     public GameObject timerGO;
+    public GameController gameController;
     private Animator animator;
     private CanvasGroup canvasGroup;
-    private bool canGenerate;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         warningScreen = GameObject.Find("WarningScreen");
         timerGO = GameObject.Find("Timer");
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
 
         animator = warningScreen.GetComponent<Animator>();
         canvasGroup = warningScreen.GetComponent<CanvasGroup>();
 
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
-        canGenerate = true;
     }
 
     // Update is called once per frame
@@ -35,12 +36,12 @@ public class WarningTrigger : MonoBehaviour
         if (collision.name.Equals("Player"))
         {
             Timer timer = timerGO.GetComponent<Timer>();
-            if (timer.warningTime && canGenerate)
+            if (timer.warningTime && gameController.canGenerateAlert)
             {
                 canvasGroup.interactable = true;
                 canvasGroup.blocksRaycasts = true;
                 canvasGroup.alpha = 1;
-                canGenerate = false;
+                gameController.canGenerateAlert = false;
             }
                 
         }

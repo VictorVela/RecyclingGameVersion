@@ -11,5 +11,12 @@ public class TrashCollector : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
         }
+
+        if (collision.gameObject.name.Equals("Player"))
+        {
+            GameController gameController = GameObject.Find("GameController").GetComponent<GameController>();
+            collision.gameObject.SetActive(false);
+            gameController.GameOver();
+        }
     }
 }

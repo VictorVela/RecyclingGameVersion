@@ -38,9 +38,22 @@ public class Coin : MonoBehaviour {
 		if (buttonGO)
 			print(button.pressing);
 
-		if (flyToCat && Input.GetButton("Fire1")) {
+		if (flyToCat && Input.GetMouseButton(0)) {
 			catDirection = - (transform.position - player.transform.position).normalized;
 			rb.velocity = new Vector2 (catDirection.x, catDirection.y) * 6f * (Time.time / timeStamp);
+		}
+
+		Collider2D[] objetosNoRaioDeAlcance = Physics2D.OverlapCircleAll(transform.position, 0.06f, 1);
+		foreach (Collider2D targetCollider in objetosNoRaioDeAlcance)
+		{
+			if (Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Player"))
+			{
+				targetCollider.gameObject.GetComponent<Player>().points += 1;
+
+				gameObject.SetActive(false);
+				flyToCat = false;
+
+			}
 		}
 	}
 

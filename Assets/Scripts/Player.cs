@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private bool isMobile;
     public bool isGameRunning;
-    private int points = 0;
+    public int points = 0;
     private Camera camera;
     public float bkpCamera;
 
@@ -194,7 +194,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // ELIMINACAO DO LIXO
-        if (collision.gameObject.tag.Equals("Trash") && Input.GetButton("Fire1"))
+        if (collision.gameObject.tag.Equals("Trash") && Input.GetMouseButton(0))
         {
             collision.gameObject.SetActive(false);
             Coin lixinhos = collision.gameObject.GetComponent<Coin>();
