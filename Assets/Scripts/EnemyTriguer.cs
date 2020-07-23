@@ -36,7 +36,7 @@ public class EnemyTriguer : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("Player") && canRolling)
         {
-            enemyRB.AddForce(new Vector2(-400, 0));
+            enemyRB.AddForce(new Vector2(-30000, 0));
             enemyAn.Play("Enemy_Rolling");
             canRolling = false;
         }

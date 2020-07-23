@@ -179,6 +179,7 @@ MonoBehaviour:
   desableSceneP: {fileID: 0}
   startSceneP: {fileID: 0}
   isGameRunning: 0
+  bkpCamera: 0
   walkingSpeed: 4
   runSpeed: 6
   jumpSpeed: 6
@@ -195,9 +196,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.28254485, y: 0.83054125}
+  m_Offset: {x: 0.14935768, y: 0.83054125}
   serializedVersion: 2
-  m_Radius: 0.7608813
+  m_Radius: 0.8940686
 --- !u!1 &3597505094835823282
 GameObject:
   m_ObjectHideFlags: 0

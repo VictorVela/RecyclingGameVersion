@@ -125,4 +125,10 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void CloseWarnning()
+    {
+        GameObject warningScreen = GameObject.Find("WarningScreen");
+        warningScreen.GetComponent<CanvasGroup>().alpha = 0;
+    }
+
 }
