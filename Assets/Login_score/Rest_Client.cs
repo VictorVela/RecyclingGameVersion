@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -17,10 +15,11 @@ public class Rest_Client : MonoBehaviour
 
     public int status;
     public int escola;
-    public int id_unico;
+    public int id_unico; // vale por aluno
     public string ano;
 
     readonly string postLoginURL = "https://ciclointegra.com.br/api/jogo/login/";
+    
 
     //criando instancia e já foi testado
     private void Start()
@@ -87,7 +86,7 @@ public class Rest_Client : MonoBehaviour
                         escola = requestRespond.escola;
                         id_unico = requestRespond.id_unico;
                         ano = requestRespond.ano;
-                        SaveSystem.SavePlayer(this);
+                        SaveSystem.SavePlayer(this);// momento onde os dados do jogador é salvo
                         StatusMessage.text = "Entrando no jogo...";
                     }
                     else
@@ -99,6 +98,19 @@ public class Rest_Client : MonoBehaviour
                 }
             }
         }
+    }
+
+    
+
+    public void SendScore(int pontuacao, int fase)
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        int aluno = data.id_unico;
+        ano = data.ano;
+        escola = data.escola;
+
+
     }
 
 

@@ -72,6 +72,7 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Login_score\PlayerData.cs" />
     <Compile Include="Assets\Login_score\Rest_Client.cs" />
+    <Compile Include="Assets\Login_score\Rest_Score.cs" />
     <Compile Include="Assets\Login_score\SaveSystem.cs" />
     <Compile Include="Assets\Login_score\ScoreSend.cs" />
     <Compile Include="Assets\Login_score\scroll.cs" />
