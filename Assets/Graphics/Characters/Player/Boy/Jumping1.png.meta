@@ -1,0 +1,788 @@
+fileFormatVersion: 2
+guid: 9b8861da0b5b01840806056e5ec42c4c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6281347024042726494
+    second: Jumping1_0
+  - first:
+      213: -2381124448383571372
+    second: Jumping1_1
+  - first:
+      213: -4499317164607553945
+    second: Jumping1_2
+  - first:
+      213: -3061627066067728939
+    second: Jumping1_3
+  - first:
+      213: -3730064400225759190
+    second: Jumping1_4
+  - first:
+      213: 6532418948882984622
+    second: Jumping1_5
+  - first:
+      213: 705508854150545803
+    second: Jumping1_6
+  - first:
+      213: 7800051758738469472
+    second: Jumping1_7
+  - first:
+      213: 4152800251566468836
+    second: Jumping1_8
+  - first:
+      213: -3399321489483363601
+    second: Jumping1_9
+  - first:
+      213: -2063383775263171132
+    second: Jumping1_10
+  - first:
+      213: 2314873464632053195
+    second: Jumping1_11
+  - first:
+      213: 950489186990739827
+    second: Jumping1_12
+  - first:
+      213: -8422276079799822352
+    second: Jumping1_13
+  - first:
+      213: 2024748804360648005
+    second: Jumping1_14
+  - first:
+      213: -6282036532694828629
+    second: Jumping1_15
+  - first:
+      213: -4617484488284657201
+    second: Jumping1_16
+  - first:
+      213: -3169302140109961696
+    second: Jumping1_17
+  - first:
+      213: 760794126747976179
+    second: Jumping1_18
+  - first:
+      213: 3752011253298755726
+    second: Jumping1_19
+  - first:
+      213: -6587164194206514409
+    second: Jumping1_20
+  - first:
+      213: -1314948779583044793
+    second: Jumping1_21
+  - first:
+      213: 4176508867029343244
+    second: Jumping1_22
+  - first:
+      213: 624041371721080383
+    second: Jumping1_23
+  - first:
+      213: 2598218851981774105
+    second: Jumping1_24
+  - first:
+      213: -8959461496393259123
+    second: Jumping1_25
+  - first:
+      213: 2802330183899210707
+    second: Jumping1_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 118
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jumping1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abe9f0692c24d8a0800000000000000
+      internalID: -6281347024042726494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_1
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a69101eeb84fed0800000000000000
+      internalID: -2381124448383571372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_2
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ebfbf80e63f81c0800000000000000
+      internalID: -4499317164607553945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_3
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5cf44976ae285d0800000000000000
+      internalID: -3061627066067728939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_4
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a209633d0362c3cc0800000000000000
+      internalID: -3730064400225759190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_5
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae633c7c60d7aa50800000000000000
+      internalID: 6532418948882984622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_6
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b81498d90987ac900800000000000000
+      internalID: 705508854150545803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_7
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06274458fb95f3c60800000000000000
+      internalID: 7800051758738469472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_8
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eea5c983d5b1a930800000000000000
+      internalID: 4152800251566468836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_9
+      rect:
+        serializedVersion: 2
+        x: 2556
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea0efd9d1f23d0d0800000000000000
+      internalID: -3399321489483363601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_10
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd522083636d53e0800000000000000
+      internalID: -2063383775263171132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_11
+      rect:
+        serializedVersion: 2
+        x: 3124
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd0f5fb625102020800000000000000
+      internalID: 2314873464632053195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_12
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371de6131e0d03d00800000000000000
+      internalID: 950489186990739827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_13
+      rect:
+        serializedVersion: 2
+        x: 3692
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7134f47801e1b80800000000000000
+      internalID: -8422276079799822352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_14
+      rect:
+        serializedVersion: 2
+        x: 3976
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545305b5f4a591c10800000000000000
+      internalID: 2024748804360648005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_15
+      rect:
+        serializedVersion: 2
+        x: 4260
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9b2b2ae09b1d8a0800000000000000
+      internalID: -6282036532694828629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_16
+      rect:
+        serializedVersion: 2
+        x: 4544
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9aae782566befb0800000000000000
+      internalID: -4617484488284657201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_17
+      rect:
+        serializedVersion: 2
+        x: 4828
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0264cd8ce706404d0800000000000000
+      internalID: -3169302140109961696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_18
+      rect:
+        serializedVersion: 2
+        x: 5112
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f144083a32ee8a00800000000000000
+      internalID: 760794126747976179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_19
+      rect:
+        serializedVersion: 2
+        x: 5396
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88f32a1b52d11430800000000000000
+      internalID: 3752011253298755726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_20
+      rect:
+        serializedVersion: 2
+        x: 5680
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713062fc011b594a0800000000000000
+      internalID: -6587164194206514409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_21
+      rect:
+        serializedVersion: 2
+        x: 5964
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7438e174d0d50cde0800000000000000
+      internalID: -1314948779583044793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_22
+      rect:
+        serializedVersion: 2
+        x: 6248
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c9d8cbfa0f5f930800000000000000
+      internalID: 4176508867029343244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_23
+      rect:
+        serializedVersion: 2
+        x: 6532
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e159e325a09a800800000000000000
+      internalID: 624041371721080383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_24
+      rect:
+        serializedVersion: 2
+        x: 6816
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dc819a74abe0420800000000000000
+      internalID: 2598218851981774105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_25
+      rect:
+        serializedVersion: 2
+        x: 7100
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87a0b00d3999a380800000000000000
+      internalID: -8959461496393259123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jumping1_26
+      rect:
+        serializedVersion: 2
+        x: 7384
+        y: 0
+        width: 284
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3eaa27470e3e620800000000000000
+      internalID: 2802330183899210707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

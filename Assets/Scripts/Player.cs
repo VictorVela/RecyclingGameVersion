@@ -27,11 +27,14 @@ public class Player : MonoBehaviour
     public bool isGameRunning;
     public int points = 0;
     private Camera camera;
-    public float bkpCamera;
+    public float bkpCamera= -8;
 
     public float walkingSpeed = 4;
     public float runSpeed = 6;
     public float jumpSpeed = 6;
+    public float desableSceneXPosition;
+    public float startSceneXPosition;
+    public float trashCollectorSceneXPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -57,12 +60,12 @@ public class Player : MonoBehaviour
     void Update()
     {
         suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y);
-        trashCollectorPlayer.transform.position = new Vector2(transform.position.x - 16, trashCollectorPlayer.transform.position.y);
+        trashCollectorPlayer.transform.position = new Vector2(transform.position.x - trashCollectorSceneXPosition, trashCollectorPlayer.transform.position.y);
         pointsLabel.text = points.ToString();
 
         // OBJETOS PARA TRATAMENTO DE CENA SEGUIREM O PLAYER
-        desableSceneP.transform.position = new Vector2(transform.position.x - 28, desableSceneP.transform.position.y);
-        startSceneP.transform.position = new Vector2(transform.position.x + 23.97f, startSceneP.transform.position.y);
+        desableSceneP.transform.position = new Vector2(transform.position.x - desableSceneXPosition, desableSceneP.transform.position.y);
+        startSceneP.transform.position = new Vector2(transform.position.x + startSceneXPosition, startSceneP.transform.position.y);
     }
 
     private void FixedUpdate()
@@ -91,6 +94,12 @@ public class Player : MonoBehaviour
         {
             if (isGameRunning)
             {
+                if (joystick.Vertical > 0.3f && isGrounded)
+                {
+                    rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpSpeed);
+
+                }
+
                 if (joystick.Horizontal > 0f && joystick.Horizontal < 0.4f)
                 {
                     rigidbody2D.velocity = (new Vector2(walkingSpeed, rigidbody2D.velocity.y));
@@ -200,12 +209,13 @@ public class Player : MonoBehaviour
             Coin lixinhos = collision.gameObject.GetComponent<Coin>();
             lixinhos.flyToCat = false;
             points += 1;
+            GetComponent<AudioSource>().Play();
         }
 
         // COLISAO COM O INIMIGO
         if (collision.gameObject.tag.Equals("Enemy"))
         {
-            if(rigidbody2D.position.y > -1.9f)
+            if(!isGrounded)
             {
                 animator.Play("Player_Jumping");
             }
@@ -213,7 +223,8 @@ public class Player : MonoBehaviour
             {
                 animator.Play("Player_Iddle");
             }
-            
+
+            collision.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
             rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
             OnPlayerHitted.Invoke();
             isGameRunning = false;

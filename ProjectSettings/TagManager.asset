@@ -10,6 +10,8 @@ TagManager:
   - TrashTrigger
   - EnemyTrigger
   - LimitSucker
+  - LimitEnemy
+  - DeadZone
   layers:
   - Default
   - TransparentFX

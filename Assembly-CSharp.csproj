@@ -70,8 +70,11 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\Scripts\Boy.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CameraControllerLivre.cs" />
     <Compile Include="Assets\Scripts\Coin.cs" />
+    <Compile Include="Assets\Scripts\EnemyHorizontal.cs" />
     <Compile Include="Assets\Scripts\EnemyTriguer.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GameUI.cs" />

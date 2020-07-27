@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     public GameObject baseScene;
     public Player player;
     public Timer timer;
-
+    
     private Canvas canvas;
     public bool canGenerateAlert;
 
@@ -36,6 +36,7 @@ public class GameController : MonoBehaviour
         }
 
         //backUpTransform();
+        
         canGenerateAlert = true;
     }
 
@@ -55,6 +56,8 @@ public class GameController : MonoBehaviour
     {
         gameOver.Show();
         timer.playerDead = true;
+        GetComponent<AudioSource>().Stop();
+        GameObject.Find("SoundTest").GetComponent<AudioSource>().Play();
     }
 
     public void ToGameRestart()

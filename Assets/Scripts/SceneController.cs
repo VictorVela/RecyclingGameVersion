@@ -55,6 +55,7 @@ public class SceneController : MonoBehaviour
         {
             GameObject scene = scenesToSpawn[index];
 
+
             if (!scene.gameObject.activeInHierarchy) // VERIFICA SE A CENA JA ESTA SENDO UTILIZADA
             {
                 scenesToSpawn[index].gameObject.SetActive(true);

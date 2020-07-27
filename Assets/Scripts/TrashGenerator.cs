@@ -31,8 +31,8 @@ public class TrashGenerator : MonoBehaviour
 
     public void ActivateMethods()
     {
-        //generateTrash();
-        //ActivateTrash();
+        generateTrash();
+        ActivateTrash();
     }
 
     private List<Coin> generateTrash()
@@ -60,10 +60,11 @@ public class TrashGenerator : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            int index = Random.Range(0, 6);
+            int index = Random.Range(0, 10);
 
              objectsToSpawn[index].gameObject.SetActive(true);
              objectsToSpawn[index].transform.position = transform.position;
+            objectsToSpawn[index].transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
              objectsToSpawn[index].transform.position = new Vector2(objectsToSpawn[index].transform.position.x, objectsToSpawn[index].transform.position.y + i * 2);
         }
     }
