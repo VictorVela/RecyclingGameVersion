@@ -76,6 +76,12 @@
     <Compile Include="Assets\Login_score\SaveSystem.cs" />
     <Compile Include="Assets\Login_score\ScoreSend.cs" />
     <Compile Include="Assets\Login_score\scroll.cs" />
+    <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\ClockUI\Scripts\ClockUI.cs" />
+    <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\Lixo_fabrica.cs" />
+    <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\Lixo_spawn.cs" />
+    <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\Seta_Button.cs" />
+    <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\fab_score.cs" />
+    <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\seta_click.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Coin.cs" />
     <Compile Include="Assets\Scripts\EnemyTriguer.cs" />
