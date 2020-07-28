@@ -12,6 +12,16 @@ TagManager:
   - LimitSucker
   - LimitEnemy
   - DeadZone
+  - FirstPoint
+  - SecondPoint
+  - FinalPoint
+  - reto
+  - Seta
+  - plastico_fab
+  - metal_fab
+  - papel_fab
+  - vidro_fab
+  - organico_fab
   layers:
   - Default
   - TransparentFX
