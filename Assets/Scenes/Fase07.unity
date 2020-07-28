@@ -266,7 +266,7 @@ PrefabInstance:
     - target: {fileID: 3597505094412994615, guid: 756f6eff23f49a14880c9e51b5bb6d59,
         type: 3}
       propertyPath: startSceneXPosition
-      value: 35.61
+      value: 35.6
       objectReference: {fileID: 0}
     - target: {fileID: 3597505094412994615, guid: 756f6eff23f49a14880c9e51b5bb6d59,
         type: 3}
@@ -359,8 +359,6 @@ MonoBehaviour:
   - {fileID: 8549927605343123447, guid: b6a6d93b81d1d0c4093a6a124f131077, type: 3}
   - {fileID: 6839221244775379401, guid: 5593ecad6c516354284f77faa383f528, type: 3}
   - {fileID: 6290167548857739770, guid: 8abb30dfd1ea26744b0072e14944a56c, type: 3}
-  instancia: {fileID: 0}
-  instancia2: {fileID: 0}
   trashsToSpawn: []
   scenesToSpawn: []
   canGenerateMoreTrahs: 1
@@ -1197,6 +1195,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 683727368704851416, guid: 02b9ad99d2e18ad48bb340ca6f50680b,
+        type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1566847565}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b9ad99d2e18ad48bb340ca6f50680b, type: 3}
 --- !u!114 &1020432773 stripped
