@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: 8e8cdaab1317f494aafc3a21e2d71396
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1168521554108566192
+    second: Asset_macaco2 (1)_0
+  - first:
+      213: -8727475877233735822
+    second: Asset_macaco2 (1)_1
+  - first:
+      213: -2013544764258634169
+    second: Asset_macaco2 (1)_2
+  - first:
+      213: 6676305514213522580
+    second: Asset_macaco2 (1)_3
+  - first:
+      213: 289719539893828635
+    second: Asset_macaco2 (1)_4
+  - first:
+      213: -2033026237260778734
+    second: Asset_macaco2 (1)_5
+  - first:
+      213: 5581801103547770276
+    second: Asset_macaco2 (1)_6
+  - first:
+      213: -6553265689816804780
+    second: Asset_macaco2 (1)_7
+  - first:
+      213: -4410284015283202880
+    second: Asset_macaco2 (1)_8
+  - first:
+      213: 5730098008082257975
+    second: Asset_macaco2 (1)_9
+  - first:
+      213: -3221582317814335519
+    second: Asset_macaco2 (1)_10
+  - first:
+      213: -322917409045106211
+    second: Asset_macaco2 (1)_11
+  - first:
+      213: 8175282358703472910
+    second: Asset_macaco2 (1)_12
+  - first:
+      213: -7724975497538274552
+    second: Asset_macaco2 (1)_13
+  - first:
+      213: -6567669558364957748
+    second: Asset_macaco2 (1)_14
+  - first:
+      213: -4693226726369345279
+    second: Asset_macaco2 (1)_15
+  - first:
+      213: 8111872883635142178
+    second: Asset_macaco2 (1)_16
+  - first:
+      213: -2208217884321068790
+    second: Asset_macaco2 (1)_17
+  - first:
+      213: 8861923037763652716
+    second: Asset_macaco2 (1)_18
+  - first:
+      213: -7255321815173548206
+    second: Asset_macaco2 (1)_19
+  - first:
+      213: -8920672265757840497
+    second: Asset_macaco2 (1)_20
+  - first:
+      213: 7743356078040201357
+    second: Asset_macaco2 (1)_21
+  - first:
+      213: 4018115256554457075
+    second: Asset_macaco2 (1)_22
+  - first:
+      213: -4957236711728840042
+    second: Asset_macaco2 (1)_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 350
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 621
+        width: 547
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba4701992c673010800000000000000
+      internalID: 1168521554108566192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 625
+        width: 508
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27741b70ee6c1e680800000000000000
+      internalID: -8727475877233735822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 621
+        width: 483
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746340384b37e04e0800000000000000
+      internalID: -2013544764258634169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_3
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 614
+        width: 465
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cbdaa1e7007ac50800000000000000
+      internalID: 6676305514213522580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 617
+        width: 435
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c7cd3f26a450400800000000000000
+      internalID: 289719539893828635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 3181
+        y: 625
+        width: 435
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213b50d986d39c3e0800000000000000
+      internalID: -2033026237260778734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_6
+      rect:
+        serializedVersion: 2
+        x: 3796
+        y: 621
+        width: 436
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a529dfa78a867d40800000000000000
+      internalID: 5581801103547770276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_7
+      rect:
+        serializedVersion: 2
+        x: 4413
+        y: 625
+        width: 435
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452d6b7639f1e05a0800000000000000
+      internalID: -6553265689816804780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_8
+      rect:
+        serializedVersion: 2
+        x: 5022
+        y: 621
+        width: 443
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c416760e068bc2c0800000000000000
+      internalID: -4410284015283202880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_9
+      rect:
+        serializedVersion: 2
+        x: 5631
+        y: 625
+        width: 450
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7389aeb67c5658f40800000000000000
+      internalID: 5730098008082257975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_10
+      rect:
+        serializedVersion: 2
+        x: 6240
+        y: 635
+        width: 457
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e73ffb53f3aa43d0800000000000000
+      internalID: -3221582317814335519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_11
+      rect:
+        serializedVersion: 2
+        x: 6849
+        y: 635
+        width: 464
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1b31ec354c48bf0800000000000000
+      internalID: -322917409045106211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 13
+        width: 476
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01c901adff647170800000000000000
+      internalID: 8175282358703472910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 13
+        width: 490
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b72a2b6bf5bc490800000000000000
+      internalID: -7724975497538274552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 9
+        width: 490
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3928b6553fad4a0800000000000000
+      internalID: -6567669558364957748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 9
+        width: 494
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101c26c782f4edeb0800000000000000
+      internalID: -4693226726369345279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 2517
+        y: 5
+        width: 490
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e323cb869239070800000000000000
+      internalID: 8111872883635142178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_17
+      rect:
+        serializedVersion: 2
+        x: 3126
+        y: 5
+        width: 501
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09c06aa885da51e0800000000000000
+      internalID: -2208217884321068790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_18
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 5
+        width: 527
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6cc0c4ec00ebfa70800000000000000
+      internalID: 8861923037763652716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_19
+      rect:
+        serializedVersion: 2
+        x: 4330
+        y: 5
+        width: 555
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257307bdf3bef4b90800000000000000
+      internalID: -7255321815173548206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_20
+      rect:
+        serializedVersion: 2
+        x: 4931
+        y: 5
+        width: 577
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b23d986d7633480800000000000000
+      internalID: -8920672265757840497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_21
+      rect:
+        serializedVersion: 2
+        x: 5540
+        y: 5
+        width: 591
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88b2f0b35de57b60800000000000000
+      internalID: 7743356078040201357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_22
+      rect:
+        serializedVersion: 2
+        x: 6160
+        y: 9
+        width: 598
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f78185798633c730800000000000000
+      internalID: 4018115256554457075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_macaco2 (1)_23
+      rect:
+        serializedVersion: 2
+        x: 6802
+        y: 13
+        width: 576
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69280e9a97b543bb0800000000000000
+      internalID: -4957236711728840042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

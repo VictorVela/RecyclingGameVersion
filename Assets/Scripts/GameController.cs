@@ -13,9 +13,9 @@ public class GameController : MonoBehaviour
     public GameObject baseScene;
     public Player player;
     public Timer timer;
-
+    
     private Canvas canvas;
-
+    public bool canGenerateAlert;
 
 
     Vector3[] defaultPos;
@@ -36,7 +36,8 @@ public class GameController : MonoBehaviour
         }
 
         //backUpTransform();
-
+        
+        canGenerateAlert = true;
     }
 
     public void GameOpen()
@@ -54,7 +55,10 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         gameOver.Show();
+        player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         timer.playerDead = true;
+        GetComponent<AudioSource>().Stop();
+        GameObject.Find("SoundTest").GetComponent<AudioSource>().Play();
     }
 
     public void ToGameRestart()
@@ -129,6 +133,7 @@ public class GameController : MonoBehaviour
     {
         GameObject warningScreen = GameObject.Find("WarningScreen");
         warningScreen.GetComponent<CanvasGroup>().alpha = 0;
+        canGenerateAlert = false;
     }
 
 }

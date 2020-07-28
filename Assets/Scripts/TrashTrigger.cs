@@ -24,7 +24,7 @@ public class TrashTrigger : MonoBehaviour
 
     public void ResetTrigger()
     {
-        trashGenerator.ResetGenerator();
+        //trashGenerator.ResetGenerator();
         canGenerate = true;
     }
 
@@ -34,6 +34,13 @@ public class TrashTrigger : MonoBehaviour
         {
             //trashGenerator.ActivateMethods();
             sceneController.ActivateTrash();
+            canGenerate = false;
+        }
+
+        if (collision.gameObject.name.Equals("Boy") && canGenerate) //GATILHO PARA GERAR O LIXO
+        {
+            trashGenerator.ActivateMethods();
+            //sceneController.ActivateTrash();
             canGenerate = false;
         }
     }

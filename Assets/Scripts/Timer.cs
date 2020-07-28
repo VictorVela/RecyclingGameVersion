@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
 {
     public float timeStart;
     public bool warningTime;
-    public int warningTimeMinute = 6;
+    public double warningTimeMinute = 6;
     private bool finished = false;
     public bool playerDead = false;
     
@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         warningTime = false;
-        timeStart = 420f;
+        timeStart = 120f;
         timer.text = timeStart.ToString();
     }
 

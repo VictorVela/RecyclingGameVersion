@@ -9,8 +9,10 @@ public class SceneController : MonoBehaviour
     public GameObject nextScenes; // POSICAO PARA INICIAR NOVA CENA
 
     public GameObject[] trashs;
-    public GameObject instancia;
-    public GameObject instancia2;
+    private GameObject instancia;
+    private GameObject instancia2;
+    private Transform scenePositionBkp;
+    //public GameObject baseScene;
     public List<Coin> trashsToSpawn;
 
     public List<GameObject> scenesToSpawn; // INSTANCIA DE CENAS CRIADAS
@@ -50,10 +52,12 @@ public class SceneController : MonoBehaviour
     public void AcvateScene()
     {
         int index = Random.Range(0, scenesToSpawn.Count);
+        //scenePositionBkp = new Vector3(4.1f, 0, 0);
 
         while (true)
         {
             GameObject scene = scenesToSpawn[index];
+
 
             if (!scene.gameObject.activeInHierarchy) // VERIFICA SE A CENA JA ESTA SENDO UTILIZADA
             {
@@ -112,15 +116,32 @@ public class SceneController : MonoBehaviour
     {
 
         GameObject positionTrash = instancia.gameObject.transform.Find("TrashGenerator").gameObject;
+        int cont = Random.Range(2, 5);
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < cont; i++)
         {
             int index = Random.Range(0, 15);
 
-            trashsToSpawn[index].gameObject.SetActive(true);
+            /*trashsToSpawn[index].gameObject.SetActive(true);
             trashsToSpawn[index].transform.position = transform.position;
-            trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x, positionTrash.transform.position.y + i * 2);
+            trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x, positionTrash.transform.position.y + i * 2);*/
+
+            while (true)
+            {   
+                if (!trashsToSpawn[index].gameObject.activeInHierarchy) // VERIFICA SE A CENA JA ESTA SENDO UTILIZADA
+                {
+                    trashsToSpawn[index].gameObject.SetActive(true);
+                    trashsToSpawn[index].transform.position = transform.position;
+                    trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x, positionTrash.transform.position.y + i * 2);
+                    break;
+                }
+                else
+                {
+                    index = Random.Range(0, scenesToSpawn.Count);
+                }
+            }
         }
+
         instancia = instancia2;
         instancia2 = null;
     }

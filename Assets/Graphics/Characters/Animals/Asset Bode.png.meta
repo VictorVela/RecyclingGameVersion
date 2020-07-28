@@ -1,0 +1,716 @@
+fileFormatVersion: 2
+guid: ca8ec100df916a441ac4e1d183603d96
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8308028876681111149
+    second: Asset Bode_0
+  - first:
+      213: -4602080306750242351
+    second: Asset Bode_1
+  - first:
+      213: -5400479749324739879
+    second: Asset Bode_2
+  - first:
+      213: -567923870433559577
+    second: Asset Bode_3
+  - first:
+      213: -1040323589717612821
+    second: Asset Bode_4
+  - first:
+      213: 5723946590777707963
+    second: Asset Bode_5
+  - first:
+      213: 6312440884249512397
+    second: Asset Bode_6
+  - first:
+      213: -6869949346963966078
+    second: Asset Bode_7
+  - first:
+      213: -7266411631591886255
+    second: Asset Bode_8
+  - first:
+      213: 2335057650427729665
+    second: Asset Bode_9
+  - first:
+      213: -7983419466540215549
+    second: Asset Bode_10
+  - first:
+      213: 4497216284463597504
+    second: Asset Bode_11
+  - first:
+      213: 6318515395315257965
+    second: Asset Bode_12
+  - first:
+      213: 5053167742738019195
+    second: Asset Bode_13
+  - first:
+      213: -3747686812563829040
+    second: Asset Bode_14
+  - first:
+      213: 1224372763682332097
+    second: Asset Bode_15
+  - first:
+      213: 4559585768214699776
+    second: Asset Bode_16
+  - first:
+      213: 1124130358044463553
+    second: Asset Bode_17
+  - first:
+      213: -5511915841491234360
+    second: Asset Bode_18
+  - first:
+      213: -6811125469601949205
+    second: Asset Bode_19
+  - first:
+      213: -2163591737746727971
+    second: Asset Bode_20
+  - first:
+      213: -7225759356559622375
+    second: Asset Bode_21
+  - first:
+      213: -6866157763999790123
+    second: Asset Bode_22
+  - first:
+      213: 3766669907786012823
+    second: Asset Bode_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 350
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Asset Bode_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 626
+        width: 552
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66e34ade3c0c4370800000000000000
+      internalID: 8308028876681111149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_1
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 631
+        width: 536
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1c45808502220c0800000000000000
+      internalID: -4602080306750242351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_2
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 631
+        width: 515
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9daeecce744ad05b0800000000000000
+      internalID: -5400479749324739879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_3
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 631
+        width: 521
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebb753bf345e18f0800000000000000
+      internalID: -567923870433559577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_4
+      rect:
+        serializedVersion: 2
+        x: 2477
+        y: 631
+        width: 534
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be62c6ff4370091f0800000000000000
+      internalID: -1040323589717612821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_5
+      rect:
+        serializedVersion: 2
+        x: 3105
+        y: 631
+        width: 520
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd0d98f81b8f6f40800000000000000
+      internalID: 5723946590777707963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_6
+      rect:
+        serializedVersion: 2
+        x: 3739
+        y: 630
+        width: 502
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9485b1a8b4a9750800000000000000
+      internalID: 6312440884249512397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_7
+      rect:
+        serializedVersion: 2
+        x: 4345
+        y: 630
+        width: 512
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287394da77909a0a0800000000000000
+      internalID: -6869949346963966078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_8
+      rect:
+        serializedVersion: 2
+        x: 4954
+        y: 640
+        width: 520
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152f233ce15882b90800000000000000
+      internalID: -7266411631591886255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_9
+      rect:
+        serializedVersion: 2
+        x: 5569
+        y: 652
+        width: 522
+        height: 541
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1079dc7bf8ac76020800000000000000
+      internalID: 2335057650427729665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_10
+      rect:
+        serializedVersion: 2
+        x: 6192
+        y: 668
+        width: 517
+        height: 535
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3039eeb0b42353190800000000000000
+      internalID: -7983419466540215549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_11
+      rect:
+        serializedVersion: 2
+        x: 6822
+        y: 668
+        width: 506
+        height: 537
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c70e892262596e30800000000000000
+      internalID: 4497216284463597504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_12
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 54
+        width: 505
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d625a9d6640efa750800000000000000
+      internalID: 6318515395315257965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_13
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 45
+        width: 503
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73bc580a45702640800000000000000
+      internalID: 5053167742738019195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_14
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 36
+        width: 504
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de87b733ba8dfbc0800000000000000
+      internalID: -3747686812563829040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_15
+      rect:
+        serializedVersion: 2
+        x: 1913
+        y: 28
+        width: 506
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cdd2f3aa88ddf010800000000000000
+      internalID: 1224372763682332097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_16
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 18
+        width: 508
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00f1d553917e64f30800000000000000
+      internalID: 4559585768214699776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_17
+      rect:
+        serializedVersion: 2
+        x: 3139
+        y: 15
+        width: 512
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c11970da96b99f00800000000000000
+      internalID: 1124130358044463553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_18
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 15
+        width: 514
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1111cdebdb183b0800000000000000
+      internalID: -5511915841491234360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_19
+      rect:
+        serializedVersion: 2
+        x: 4364
+        y: 18
+        width: 515
+        height: 561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be992c7e8750a71a0800000000000000
+      internalID: -6811125469601949205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_20
+      rect:
+        serializedVersion: 2
+        x: 4979
+        y: 14
+        width: 513
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddbd2a817c069f1e0800000000000000
+      internalID: -2163591737746727971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_21
+      rect:
+        serializedVersion: 2
+        x: 5589
+        y: 15
+        width: 515
+        height: 550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ffecf1622f8bb90800000000000000
+      internalID: -7225759356559622375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_22
+      rect:
+        serializedVersion: 2
+        x: 6180
+        y: 18
+        width: 536
+        height: 544
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db800164e186b0a0800000000000000
+      internalID: -6866157763999790123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset Bode_23
+      rect:
+        serializedVersion: 2
+        x: 6782
+        y: 14
+        width: 545
+        height: 538
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7981dbf0356e54430800000000000000
+      internalID: 3766669907786012823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

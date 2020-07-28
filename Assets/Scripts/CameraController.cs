@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
 
     public float limitedUp = 2f;
     public float limitedDown = 0f;
-    public float limitedLeft = 0f;
+    public float limitedLeft = -8f;
     public float limitedRight = 100f;
 
     private Transform player;
@@ -35,6 +35,16 @@ public class CameraController : MonoBehaviour
     {
         if (player != null)
         {
+            limitedLeft = playerObj.bkpCamera;
+
+            playerX = Mathf.Clamp(player.position.x + offsetX, limitedLeft, limitedRight);
+            playerY = Mathf.Clamp(player.position.y, limitedDown, limitedUp);
+
+            transform.position = Vector3.Lerp(transform.position, new Vector3(playerX, playerY, transform.position.z), smooth);
+        }
+
+        /*if (player != null)
+        {
 
             limitedLeft = playerObj.bkpCamera;
                       
@@ -43,7 +53,7 @@ public class CameraController : MonoBehaviour
 
             
             transform.position = Vector3.Lerp(transform.position, new Vector3(playerX, player.position.y + offsetY, transform.position.z), smooth);
-        }
+        }*/
 
     }
 }
