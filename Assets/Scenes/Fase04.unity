@@ -2625,7 +2625,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527573659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.27, y: -0.29, z: 0}
+  m_LocalPosition: {x: 2.02, y: -0.29, z: 0}
   m_LocalScale: {x: 1.7805176, y: 0.3375, z: 1}
   m_Children: []
   m_Father: {fileID: 1584300052}
@@ -2646,7 +2646,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 140
   m_UseSideFriction: 1
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -2934,7 +2934,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584300051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.87, y: 0, z: -24.402344}
+  m_LocalPosition: {x: 4.51, y: 0, z: -24.402344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1161569285}
@@ -3311,7 +3311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651382460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.46, y: 1.17, z: 0}
+  m_LocalPosition: {x: 2.21, y: 1.17, z: 0}
   m_LocalScale: {x: 1.7805176, y: 0.3375, z: 1}
   m_Children: []
   m_Father: {fileID: 1584300052}
@@ -3332,7 +3332,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 140
   m_UseSideFriction: 1
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -4164,7 +4164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992336328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.7503424, y: 0.8885343, z: 24.402344}
+  m_LocalPosition: {x: 3.5003424, y: 0.8885343, z: 24.402344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1584300052}
@@ -4304,7 +4304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025258980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.8689995, y: 0.237, z: 0}
+  m_LocalPosition: {x: 4.6189995, y: 0.237, z: 0}
   m_LocalScale: {x: 2.5898438, y: 0.3375, z: 1}
   m_Children: []
   m_Father: {fileID: 1584300052}
@@ -4325,7 +4325,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 140
   m_UseSideFriction: 1
   m_UseSideBounce: 0
   m_SideArc: 1

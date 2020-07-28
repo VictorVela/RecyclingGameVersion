@@ -55,6 +55,7 @@ public class GameController : MonoBehaviour
     public void GameOver()
     {
         gameOver.Show();
+        player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         timer.playerDead = true;
         GetComponent<AudioSource>().Stop();
         GameObject.Find("SoundTest").GetComponent<AudioSource>().Play();

@@ -200,6 +200,11 @@ public class Player : MonoBehaviour
         } return false;
     }
 
+    private void dataExportTest()
+    {
+        print(gameObject.scene.name.ToString() + " - " + points + "pontos");
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // ELIMINACAO DO LIXO
@@ -224,6 +229,7 @@ public class Player : MonoBehaviour
                 animator.Play("Player_Iddle");
             }
 
+            dataExportTest();
             collision.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
             rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
             OnPlayerHitted.Invoke();
@@ -234,7 +240,8 @@ public class Player : MonoBehaviour
         {
             OnPlayerHitted.Invoke();
             gameObject.SetActive(false);
-            
+
+            dataExportTest();
             camera.transform.position = camera.transform.position;
         }
     }

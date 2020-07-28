@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ScreenController : MonoBehaviour
 {
+    public GameObject screen1;
+    public GameObject screen2;
 
     void Start()
     {
@@ -17,9 +19,21 @@ public class ScreenController : MonoBehaviour
         
     }
 
+    public void Next()
+    {
+        screen1.GetComponent<Animator>().Play("FadeOut");
+        screen2.GetComponent<Animator>().Play("FadeInMore");
+    }
+
+    public void Back()
+    {
+        screen2.GetComponent<Animator>().Play("FadeOutMore");
+        screen1.GetComponent<Animator>().Play("FadeIn");
+    }
+
     public void GameStart()
     {
-        SceneManager.LoadScene("Fase01");
+        //SceneManager.LoadScene("Fase01");
     }
 
     public void StartFase01()
@@ -40,5 +54,13 @@ public class ScreenController : MonoBehaviour
     public void StartFase04()
     {
         SceneManager.LoadScene("Fase04");
+    }
+    public void StartFase05()
+    {
+        //SceneManager.LoadScene("Fase05");
+    }
+    public void StartFase06()
+    {
+        SceneManager.LoadScene("Fase06");
     }
 }
