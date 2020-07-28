@@ -63,4 +63,9 @@ public class ScreenController : MonoBehaviour
     {
         SceneManager.LoadScene("Fase06");
     }
+    
+    public void StartFase07()
+    {
+        SceneManager.LoadScene("Fase07");
+    }
 }
