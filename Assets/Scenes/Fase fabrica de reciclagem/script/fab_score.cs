@@ -22,5 +22,6 @@ public class fab_score : MonoBehaviour
     public static void GameOver()
     {
         //Application.LoadLevel("Fabrica_reciclagem_08");
+        //GameOver_fab.GameOver = true;
     }
 }
