@@ -66,6 +66,7 @@ public class Player : MonoBehaviour
         // OBJETOS PARA TRATAMENTO DE CENA SEGUIREM O PLAYER
         desableSceneP.transform.position = new Vector2(transform.position.x - desableSceneXPosition, desableSceneP.transform.position.y);
         startSceneP.transform.position = new Vector2(transform.position.x + startSceneXPosition, startSceneP.transform.position.y);
+        PointScreen.pointPlayer = points;
     }
 
     private void FixedUpdate()
@@ -229,15 +230,21 @@ public class Player : MonoBehaviour
                 animator.Play("Player_Iddle");
             }
 
-            dataExportTest();
-            collision.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+            //dataExportTest();
+            if (!gameObject.scene.name.Equals("Fase01"))
+            {
+                collision.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+            }
+
             rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+            PointScreen.pointPlayer = points;
             OnPlayerHitted.Invoke();
             isGameRunning = false;
         }
 
         if (collision.gameObject.name.Equals("DeadZone"))
         {
+            PointScreen.pointPlayer = points;
             OnPlayerHitted.Invoke();
             gameObject.SetActive(false);
 

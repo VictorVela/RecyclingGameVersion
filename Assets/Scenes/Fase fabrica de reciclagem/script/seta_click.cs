@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
-using Packages.Rider.Editor.UnitTesting;
+//using Packages.Rider.Editor.UnitTesting;
 
 public class seta_click : MonoBehaviour
 {

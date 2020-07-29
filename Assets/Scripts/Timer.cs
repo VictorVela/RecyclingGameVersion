@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     public float timeStart;
+    public float newScreenTime = 10f;
     public bool warningTime;
     public double warningTimeMinute = 6;
     private bool finished = false;
     public bool playerDead = false;
+    public bool gameFinished = false;
     
     public TextMeshProUGUI timer;
     public GameController gameController;
@@ -17,6 +20,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameFinished = false;
         warningTime = false;
         timeStart = 120f;
         timer.text = timeStart.ToString();
@@ -25,10 +29,24 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameFinished)
+        {
+            newScreenTime -= Time.deltaTime;
+
+            //string minutes = ((int)newScreenTime / 60).ToString();
+            string seconds = (newScreenTime % 60).ToString("0");
+
+            if (seconds.Equals("0"))
+            {
+                SceneManager.LoadScene("Points");
+            }
+            
+        }
         if (finished)
         {
             timer.text = "0:00";
-            gameController.GameOver();
+            gameFinished = true;
+            gameController.TimeOver();
             return;
         }
         if (!playerDead)
@@ -46,6 +64,7 @@ public class Timer : MonoBehaviour
                 finished = true;
             }
         }
+        
     }
 
     public bool timeWarningTest(string minutes)

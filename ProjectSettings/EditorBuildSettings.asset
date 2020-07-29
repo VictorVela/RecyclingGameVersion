@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase07.unity
     guid: 059013d9050b66448a6a45de0f7a901a
+  - enabled: 1
+    path: Assets/Scenes/Points.unity
+    guid: 275ea6b0577a81846bdc2d7f4a88efa8
   m_configObjects: {}
