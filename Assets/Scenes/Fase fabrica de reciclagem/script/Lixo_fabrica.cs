@@ -15,12 +15,13 @@ public class Lixo_fabrica : MonoBehaviour
     private bool secondP = false;
     private bool seta01 = false;
     private bool destroy = false;
+    private int original;
 
     // Start is called before the first frame update
     void Start()
     {
 
-        randomRange = Random.Range(0,6);
+        randomRange = Random.Range(0,2);
 
         rend = GetComponent<SpriteRenderer>();
 
@@ -28,6 +29,7 @@ public class Lixo_fabrica : MonoBehaviour
         {
             lata = Resources.Load<Sprite>("lata");
             rend.sprite = lata;
+            original = randomRange;
         }
 
         if (randomRange == 1)
@@ -91,8 +93,10 @@ public class Lixo_fabrica : MonoBehaviour
             seta01 = true;
         }
 
+        //Plastico
         if (collision.tag == "plastico_fab")
         {
+            Debug.Log("plastico");
             if (randomRange == 2)
             {
                 fab_score.scoreValue += 10;
@@ -102,6 +106,9 @@ public class Lixo_fabrica : MonoBehaviour
             {
                 fab_score.GameOver();
             }
+            Debug.Log(randomRange);
+            destroy = true;
+
         }
 
         if (collision.tag == "metal_fab")
@@ -113,8 +120,11 @@ public class Lixo_fabrica : MonoBehaviour
             }
             else
             {
-                fab_score.GameOver();
+              fab_score.GameOver();
             }
+            Debug.Log(randomRange);
+            destroy = true;
+
         }
 
         if (collision.tag == "papel_fab")
@@ -128,6 +138,9 @@ public class Lixo_fabrica : MonoBehaviour
             {
                 fab_score.GameOver();
             }
+            Debug.Log(randomRange);
+            destroy = true;
+
         }
 
         if (collision.tag == "vidro_fab")
@@ -141,6 +154,9 @@ public class Lixo_fabrica : MonoBehaviour
             {
                 fab_score.GameOver();
             }
+            Debug.Log(randomRange);
+            destroy = true;
+
         }
 
         if (collision.tag == "organico_fab")
@@ -154,6 +170,9 @@ public class Lixo_fabrica : MonoBehaviour
             {
                 fab_score.GameOver();
             }
+            Debug.Log(randomRange);
+            destroy = true;
+
         }
 
         if (collision.tag == "FinalPoint")
@@ -166,7 +185,9 @@ public class Lixo_fabrica : MonoBehaviour
             else
             {
                 fab_score.GameOver();
-            }                    
+            }
+            Debug.Log(randomRange);
+            destroy = true;
         }
     }
 

@@ -77,6 +77,7 @@
     <Compile Include="Assets\Login_score\ScoreSend.cs" />
     <Compile Include="Assets\Login_score\scroll.cs" />
     <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\ClockUI\Scripts\ClockUI.cs" />
+    <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\GameOver_fab.cs" />
     <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\Lixo_fabrica.cs" />
     <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\Lixo_spawn.cs" />
     <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\Seta_Button.cs" />
