@@ -1,11 +1,18 @@
-﻿using System;
+﻿using Packages.Rider.Editor.UnitTesting;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
+
 public class Lixo_fabrica : MonoBehaviour
 {
     public float speed = 30.0f;
+    private int nivel;
+    public bool fase5 = false;
+    public bool fase6 = false;
+    public bool fase7 = false;
+    public bool fase8 = false;
     public Sprite lata, jornal, plastico, vidro, organico, entulho;
     private SpriteRenderer rend;
     private Rigidbody2D rb;
@@ -18,11 +25,33 @@ public class Lixo_fabrica : MonoBehaviour
     private bool chegaNaopode = true;
     private int original;
 
+    public class UnicLixo
+    {
+        public Sprite resultadoLixo;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        
+        if (fase5)
+        {
+            nivel = 3;
+        }
+        if (fase6)
+        {
+            nivel = 4;
+        }
+        if (fase7)
+        {
+            nivel = 5;
+        }
+        if (fase8)
+        {
+            nivel = 7;
+        }
 
-        randomRange = Random.Range(0,2);
+        randomRange = Random.Range(0, nivel);
 
         rend = GetComponent<SpriteRenderer>();
 
@@ -74,26 +103,91 @@ public class Lixo_fabrica : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        
-         //TESTE COM PLASTICO
-         if (collision.tag == "plastico_fab")
+        UnicLixo unicLixoPlastico = new UnicLixo();
+        unicLixoPlastico.resultadoLixo = rend.sprite;
+
+        //TESTE COM PLASTICO
+        if (collision.tag == "plastico_fab")
          {
-             if (rend.sprite == plastico)
+             if (unicLixoPlastico.resultadoLixo == plastico)
              {
                  fab_score.scoreValue += 5;
                  destroy = true;
+                return;
              }
              else
              {
                  fab_score.GameOver();
              }
              destroy = true;
-         }
+            return;
+
+        }
 
         //TESTE COM METAL
         if (collision.tag == "metal_fab")
         {
             if (rend.sprite == lata)
+            {
+                fab_score.scoreValue += 5;
+                destroy = true;
+            }
+            else
+            {
+                fab_score.GameOver();
+            }
+            destroy = true;
+        }
+
+        //TESTE COM PAPEL
+        if (collision.tag == "papel_fab")
+        {
+            if (rend.sprite == jornal)
+            {
+                fab_score.scoreValue += 5;
+                destroy = true;
+            }
+            else
+            {
+                fab_score.GameOver();
+            }
+            destroy = true;
+        }
+
+        //TESTE COM VIDRO
+        if (collision.tag == "vidro_fab")
+        {
+            if (rend.sprite == vidro)
+            {
+                fab_score.scoreValue += 5;
+                destroy = true;
+            }
+            else
+            {
+                fab_score.GameOver();
+            }
+            destroy = true;
+        }
+
+        //TESTE COM ORGANICO
+        if (collision.tag == "organico_fab")
+        {
+            if (rend.sprite == organico)
+            {
+                fab_score.scoreValue += 5;
+                destroy = true;
+            }
+            else
+            {
+                fab_score.GameOver();
+            }
+            destroy = true;
+        }
+
+        //TESTE COM ENTULHO
+        if (collision.tag == "FinalPoint")
+        {
+            if (rend.sprite == entulho)
             {
                 fab_score.scoreValue += 5;
                 destroy = true;

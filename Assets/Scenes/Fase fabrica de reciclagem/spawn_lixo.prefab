@@ -44,9 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff63ae1ecd57a104a8997ad2a6c2914a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lixoPrefab: {fileID: 6893534722765968413, guid: 7c596d80d9d59374fb9998574756d8ed,
+  lixoPrefab: {fileID: 5763919610156526332, guid: 7c596d80d9d59374fb9998574756d8ed,
     type: 3}
-  respawnTime: 1
 --- !u!1001 &4980072046590550905
 PrefabInstance:
   m_ObjectHideFlags: 0
