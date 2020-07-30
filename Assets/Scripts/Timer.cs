@@ -23,6 +23,8 @@ public class Timer : MonoBehaviour
         gameFinished = false;
         warningTime = false;
         timeStart = 120f;
+        if(gameObject.scene.name.Equals("Fase02"))
+            timeStart = 1220f;
         timer.text = timeStart.ToString();
     }
 

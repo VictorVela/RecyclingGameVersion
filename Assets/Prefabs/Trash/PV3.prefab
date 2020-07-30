@@ -77,5 +77,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PV3
       objectReference: {fileID: 0}
+    - target: {fileID: 9149162483627971901, guid: f14c4b475a9fd1d45a97bf3c2bdabf75,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.05
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f14c4b475a9fd1d45a97bf3c2bdabf75, type: 3}

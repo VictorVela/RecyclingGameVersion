@@ -76,6 +76,11 @@
     <Compile Include="Assets\Login_score\SaveSystem.cs" />
     <Compile Include="Assets\Login_score\ScoreSend.cs" />
     <Compile Include="Assets\Login_score\scroll.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\Water2D\Water2DEffects.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\Water2D\Water2DGrabRenderTex.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\Water2D\Water2DMaterialScaler.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\Water2D\Water2DSplashFX.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\Water2D\Water2DUpdateRenderTex.cs" />
     <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\ClockUI\Scripts\ClockUI.cs" />
     <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\Lixo_fabrica.cs" />
     <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\Lixo_spawn.cs" />
@@ -102,7 +107,9 @@
     <Compile Include="Assets\Scripts\TrashCollector.cs" />
     <Compile Include="Assets\Scripts\TrashGenerator.cs" />
     <Compile Include="Assets\Scripts\TrashTrigger.cs" />
+    <Compile Include="Assets\Scripts\Tree.cs" />
     <Compile Include="Assets\Scripts\WarningTrigger.cs" />
+    <Compile Include="Assets\Scripts\WaterPlayer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -139,9 +146,14 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Raving Bots\Shaders\Water2D.cginc" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\Raving Bots\Shaders\GrabPass Water 2D Waves.shader" />
+    <None Include="Assets\Raving Bots\Shaders\RenderTexture Water 2D Waves.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Raving Bots\Shaders\GrabPass Water 2D Plain.shader" />
+    <None Include="Assets\Raving Bots\Shaders\RenderTexture Water 2D Plain.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />

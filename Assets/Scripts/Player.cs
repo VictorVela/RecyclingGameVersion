@@ -60,12 +60,17 @@ public class Player : MonoBehaviour
     void Update()
     {
         suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y);
-        trashCollectorPlayer.transform.position = new Vector2(transform.position.x - trashCollectorSceneXPosition, trashCollectorPlayer.transform.position.y);
+        if (!gameObject.scene.name.Equals("Fase02"))
+        {
+            desableSceneP.transform.position = new Vector2(transform.position.x - desableSceneXPosition, desableSceneP.transform.position.y);
+            startSceneP.transform.position = new Vector2(transform.position.x + startSceneXPosition, startSceneP.transform.position.y);
+            trashCollectorPlayer.transform.position = new Vector2(transform.position.x - trashCollectorSceneXPosition, trashCollectorPlayer.transform.position.y);
+        }
+            
         pointsLabel.text = points.ToString();
 
         // OBJETOS PARA TRATAMENTO DE CENA SEGUIREM O PLAYER
-        desableSceneP.transform.position = new Vector2(transform.position.x - desableSceneXPosition, desableSceneP.transform.position.y);
-        startSceneP.transform.position = new Vector2(transform.position.x + startSceneXPosition, startSceneP.transform.position.y);
+        
         PointScreen.pointPlayer = points;
     }
 
@@ -248,8 +253,18 @@ public class Player : MonoBehaviour
             OnPlayerHitted.Invoke();
             gameObject.SetActive(false);
 
-            dataExportTest();
+            //dataExportTest();
             camera.transform.position = camera.transform.position;
+        }
+
+        if (collision.gameObject.tag.Equals("DeadZone"))
+        {
+            PointScreen.pointPlayer = points;
+            OnPlayerHitted.Invoke();
+            gameObject.SetActive(false);
+
+            //dataExportTest();
+            //camera.transform.position = camera.transform.position;
         }
     }
 }

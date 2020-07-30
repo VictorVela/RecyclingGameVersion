@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHorizontal : MonoBehaviour
 {
     private bool colidde = false;
-    private float move = -3;
+    public float move = -3;
 
 
     // Start is called before the first frame update
