@@ -84,6 +84,7 @@ public class Coin : MonoBehaviour {
 		{
 			Physics2D.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider2D>());
 		}
+
 	}
 
 

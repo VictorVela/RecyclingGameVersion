@@ -33,6 +33,8 @@ namespace RavingBots.Water2D
 		public bool DISABLE_REFRACTION;
 
 		private MeshRenderer _renderer;
+		//public Material newMesh;
+		//public bool canClearRiver = false;
 		
 		protected void Awake()
 		{
@@ -54,7 +56,9 @@ namespace RavingBots.Water2D
 			{
 				UpdateMaterial();
 				UpdateShader();
-            }
+			}
+
+            
         }
 
 		[ContextMenu("Update Material")]
@@ -86,6 +90,8 @@ namespace RavingBots.Water2D
 
             m.SetTextureScale("_MainTex", new Vector2(TextureTilling * ly, lx / ly));
 			m.SetTextureScale("_Refraction", new Vector2(BumpMapTilling * lx, BumpMapTilling * ly));
+
+			
 		}
 
 		[ContextMenu("Update Shader")]
@@ -95,6 +101,8 @@ namespace RavingBots.Water2D
 
 			SetKeyword(m, DISABLE_WAVES, _DISABLE_WAVES);
 			SetKeyword(m, DISABLE_REFRACTION, _DISABLE_REFRACTION);
+
+			
 		}
 
 		private void SetKeyword(Material m, bool state, string name)
@@ -107,5 +115,7 @@ namespace RavingBots.Water2D
 			else
 				m.DisableKeyword(name);
 		}
+
+		
 	}
 }

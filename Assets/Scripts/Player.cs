@@ -36,6 +36,8 @@ public class Player : MonoBehaviour
     public float startSceneXPosition;
     public float trashCollectorSceneXPosition;
 
+    public int trashInRiver = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -216,11 +218,18 @@ public class Player : MonoBehaviour
         // ELIMINACAO DO LIXO
         if (collision.gameObject.tag.Equals("Trash") && Input.GetMouseButton(0))
         {
+            if (collision.gameObject.layer.Equals(13))
+            {
+                trashInRiver += 1;
+            }
+
             collision.gameObject.SetActive(false);
             Coin lixinhos = collision.gameObject.GetComponent<Coin>();
             lixinhos.flyToCat = false;
             points += 1;
             GetComponent<AudioSource>().Play();
+
+            
         }
 
         // COLISAO COM O INIMIGO

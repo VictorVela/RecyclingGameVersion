@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scripts\TrashTrigger.cs" />
     <Compile Include="Assets\Scripts\Tree.cs" />
     <Compile Include="Assets\Scripts\WarningTrigger.cs" />
+    <Compile Include="Assets\Scripts\WaterClean.cs" />
     <Compile Include="Assets\Scripts\WaterPlayer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
