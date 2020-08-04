@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHorizontal : MonoBehaviour
 {
     private bool colidde = false;
-    private float move = -3;
+    public float move = -3;
 
 
     // Start is called before the first frame update
@@ -43,5 +43,14 @@ public class EnemyHorizontal : MonoBehaviour
         }
     }
 
-   
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Trash")
+        {
+            Physics2D.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider2D>());
+        }
+
+    }
+
+
 }

@@ -53,7 +53,7 @@ public class Coin : MonoBehaviour {
 		Collider2D[] objetosNoRaioDeAlcance = Physics2D.OverlapCircleAll(transform.position, 0.06f, 1);
 		foreach (Collider2D targetCollider in objetosNoRaioDeAlcance)
 		{
-			if (Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Player"))
+			if (Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Player") || Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Boy"))
 			{
 				targetCollider.gameObject.GetComponent<Player>().points += 1;
 
@@ -75,6 +75,16 @@ public class Coin : MonoBehaviour {
         {
 			flyToCat = false;
         }
+		
+	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+		if (collision.gameObject.tag.Equals("Enemy"))
+		{
+			Physics2D.IgnoreCollision(collision.collider, gameObject.GetComponent<Collider2D>());
+		}
+
 	}
 
 

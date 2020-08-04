@@ -2393,8 +2393,7 @@ MonoBehaviour:
   - {fileID: 8549927605343123447, guid: b6a6d93b81d1d0c4093a6a124f131077, type: 3}
   - {fileID: 6839221244775379401, guid: 5593ecad6c516354284f77faa383f528, type: 3}
   - {fileID: 6290167548857739770, guid: 8abb30dfd1ea26744b0072e14944a56c, type: 3}
-  instancia: {fileID: 0}
-  instancia2: {fileID: 0}
+  scenePositionBkp: {x: 0, y: 0, z: 0}
   trashsToSpawn: []
   scenesToSpawn: []
   canGenerateMoreTrahs: 1
@@ -2794,6 +2793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ede9429ee6e36147bb6e032bcf1cc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: -3
 --- !u!50 &775773830
 Rigidbody2D:
   serializedVersion: 4
@@ -3242,6 +3242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ede9429ee6e36147bb6e032bcf1cc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: -3
 --- !u!50 &882923300
 Rigidbody2D:
   serializedVersion: 4
@@ -4429,6 +4430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ede9429ee6e36147bb6e032bcf1cc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: -3
 --- !u!50 &1135761158
 Rigidbody2D:
   serializedVersion: 4
@@ -5169,6 +5171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ede9429ee6e36147bb6e032bcf1cc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: -3
 --- !u!95 &1278254505
 Animator:
   serializedVersion: 3
@@ -7861,6 +7864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ede9429ee6e36147bb6e032bcf1cc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  move: -3
 --- !u!50 &2039334118
 Rigidbody2D:
   serializedVersion: 4

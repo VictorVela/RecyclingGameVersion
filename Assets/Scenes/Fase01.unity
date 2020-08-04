@@ -539,7 +539,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.508
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1100,8 +1100,7 @@ MonoBehaviour:
   - {fileID: 7719324416911614262, guid: 0aa31ba8537982a41b04f79adb6f2e27, type: 3}
   - {fileID: 9149162483627971889, guid: f14c4b475a9fd1d45a97bf3c2bdabf75, type: 3}
   - {fileID: 2826076183279520120, guid: d08756f2eef65b64d87f77a73c81fd26, type: 3}
-  instancia: {fileID: 0}
-  instancia2: {fileID: 0}
+  scenePositionBkp: {x: 0, y: 0, z: 0}
   trashsToSpawn: []
   scenesToSpawn: []
   canGenerateMoreTrahs: 0
@@ -2901,6 +2900,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.y
       value: 0.6966176
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597505094412994614, guid: 756f6eff23f49a14880c9e51b5bb6d59,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3597505094412994615, guid: 756f6eff23f49a14880c9e51b5bb6d59,
         type: 3}
