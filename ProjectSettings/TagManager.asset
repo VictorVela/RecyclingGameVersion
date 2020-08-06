@@ -24,6 +24,7 @@ TagManager:
   - organico_fab
   - Water
   - Tronco
+  - NormalTrahSucker
   layers:
   - Default
   - TransparentFX
