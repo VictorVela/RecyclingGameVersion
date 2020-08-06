@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     public float trashCollectorSceneXPosition;
 
     public int trashInRiver = 0;
+    private bool inRiver;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,7 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         isGameRunning = true;
+        inRiver = false;
         isMobile = MobileTest();
     }
 
@@ -61,7 +63,15 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y);
+        if (!inRiver)
+        {
+            suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y);
+        }
+        else
+        {
+            suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y - 0.8f);
+        }
+        
         if (!gameObject.scene.name.Equals("Fase02"))
         {
             desableSceneP.transform.position = new Vector2(transform.position.x - desableSceneXPosition, desableSceneP.transform.position.y);
@@ -274,6 +284,16 @@ public class Player : MonoBehaviour
 
             //dataExportTest();
             //camera.transform.position = camera.transform.position;
+        }
+
+        if (collision.gameObject.tag.Equals("NormalTrahSucker"))
+        {
+            inRiver = false;
+        }
+
+        if (collision.gameObject.tag.Equals("Tronco"))
+        {
+            inRiver = true;
         }
     }
 }
