@@ -97,6 +97,7 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GameUI.cs" />
     <Compile Include="Assets\Scripts\MobileButton.cs" />
+    <Compile Include="Assets\Scripts\PersonSelect.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PointScreen.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />

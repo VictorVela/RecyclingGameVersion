@@ -130,7 +130,7 @@ public class SceneController : MonoBehaviour
         {
             int index = Random.Range(0, trashsToSpawn.Count - 1);
 
-            print(index);
+            //print(index);
             /*trashsToSpawn[index].gameObject.SetActive(true);
             trashsToSpawn[index].transform.position = transform.position;
             trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x, positionTrash.transform.position.y + i * 2);*/
