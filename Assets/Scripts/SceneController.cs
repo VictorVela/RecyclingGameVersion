@@ -11,7 +11,7 @@ public class SceneController : MonoBehaviour
     public GameObject[] trashs;
     private GameObject instancia;
     private GameObject instancia2;
-    private Transform scenePositionBkp;
+    public Vector3 scenePositionBkp;
     //public GameObject baseScene;
     public List<Coin> trashsToSpawn;
 
@@ -58,15 +58,23 @@ public class SceneController : MonoBehaviour
         {
             GameObject scene = scenesToSpawn[index];
 
-
             if (!scene.gameObject.activeInHierarchy) // VERIFICA SE A CENA JA ESTA SENDO UTILIZADA
             {
                 scenesToSpawn[index].gameObject.SetActive(true);
                 SceneTrigger sceneTrigger = scenesToSpawn[index].gameObject.GetComponentInChildren<SceneTrigger>();
                 sceneTrigger.canGenerate = true;
                 testTrashScene2(scene);
-                scenesToSpawn[index].transform.position = nextScenes.transform.position;
-                //ResetGenerator();
+                if(scenePositionBkp.x != 0 && !gameObject.scene.name.Equals("Fase01"))
+                {
+                    scenesToSpawn[index].transform.position = scenePositionBkp;
+                }
+                else
+                {
+                    scenesToSpawn[index].transform.position = nextScenes.transform.position;
+                }
+
+                //scenePositionBkp = scene.transform;
+                scenePositionBkp = new Vector3(scene.transform.position.x + 29.10f, scene.transform.position.y, scene.transform.position.z);
                 break;
             }
             else
@@ -116,12 +124,13 @@ public class SceneController : MonoBehaviour
     {
 
         GameObject positionTrash = instancia.gameObject.transform.Find("TrashGenerator").gameObject;
-        int cont = Random.Range(2, 5);
+        int cont = Random.Range(3, 6);
 
         for (int i = 0; i < cont; i++)
         {
-            int index = Random.Range(0, 15);
+            int index = Random.Range(0, trashsToSpawn.Count - 1);
 
+            //print(index);
             /*trashsToSpawn[index].gameObject.SetActive(true);
             trashsToSpawn[index].transform.position = transform.position;
             trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x, positionTrash.transform.position.y + i * 2);*/
@@ -137,7 +146,7 @@ public class SceneController : MonoBehaviour
                 }
                 else
                 {
-                    index = Random.Range(0, scenesToSpawn.Count);
+                    index = Random.Range(0, trashsToSpawn.Count - 1);
                 }
             }
         }

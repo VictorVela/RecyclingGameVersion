@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<Player>().transform;
-        playerObj = GameObject.Find("Player").GetComponent<Player>();
+        playerObj = player.GetComponent<Player>();
     }
 
     // Update is called once per frame

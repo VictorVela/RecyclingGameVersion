@@ -540,8 +540,7 @@ MonoBehaviour:
   - {fileID: 8549927605343123447, guid: b6a6d93b81d1d0c4093a6a124f131077, type: 3}
   - {fileID: 6839221244775379401, guid: 5593ecad6c516354284f77faa383f528, type: 3}
   - {fileID: 6290167548857739770, guid: 8abb30dfd1ea26744b0072e14944a56c, type: 3}
-  instancia: {fileID: 0}
-  instancia2: {fileID: 0}
+  scenePositionBkp: {x: 0, y: 0, z: 0}
   trashsToSpawn: []
   scenesToSpawn: []
   canGenerateMoreTrahs: 1
@@ -1639,7 +1638,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1747,7 +1746,7 @@ Transform:
   m_GameObject: {fileID: 1032250866}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 24.402344}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.001, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 126130381}
   m_RootOrder: 2
@@ -3921,7 +3920,7 @@ Transform:
   m_GameObject: {fileID: 2086313353}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 24.402344}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.002, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 126130381}
   m_RootOrder: 3

@@ -22,6 +22,9 @@ TagManager:
   - papel_fab
   - vidro_fab
   - organico_fab
+  - Water
+  - Tronco
+  - NormalTrahSucker
   layers:
   - Default
   - TransparentFX
@@ -36,7 +39,7 @@ TagManager:
   - EnemyScene
   - TrashAndEnemyScene
   - Plataform
-  - 
+  - TrashInRiver
   - 
   - 
   - 

@@ -22,6 +22,7 @@ public class Boy : MonoBehaviour
     private bool isMobile;
     public bool isGameRunning;
     public int points = 0;
+    public int trashInRiver = 0;
 
     public float walkingSpeed = 4;
     public float runSpeed = 6;
@@ -188,6 +189,10 @@ public class Boy : MonoBehaviour
             Coin lixinhos = collision.gameObject.GetComponent<Coin>();
             lixinhos.flyToCat = false;
             points += 1;
+            if (collision.gameObject.layer.Equals("TrashInRiver"))
+            {
+                trashInRiver += 1;
+            }
         }
 
         // COLISAO COM O INIMIGO

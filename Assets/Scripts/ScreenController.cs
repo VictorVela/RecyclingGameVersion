@@ -7,6 +7,7 @@ public class ScreenController : MonoBehaviour
 {
     public GameObject screen1;
     public GameObject screen2;
+    public GameObject screen3;
 
     void Start()
     {
@@ -30,6 +31,16 @@ public class ScreenController : MonoBehaviour
         screen2.GetComponent<Animator>().Play("FadeOutMore");
         screen1.GetComponent<Animator>().Play("FadeIn");
     }
+    public void SelectBoy(string levelName)
+    {
+        PersonSelect.selectedPerson = "Boy";
+        SceneManager.LoadScene(levelName);
+    }
+    public void SelectGirl(string levelName)
+    {
+        PersonSelect.selectedPerson = "Girl";
+        SceneManager.LoadScene(levelName);
+    }
 
     public void GameStart()
     {
@@ -43,7 +54,7 @@ public class ScreenController : MonoBehaviour
 
     public void StartFase02()
     {
-        //SceneManager.LoadScene("Fase02");
+        SceneManager.LoadScene("Fase02");
     }
 
     public void StartFase03()
@@ -67,5 +78,9 @@ public class ScreenController : MonoBehaviour
     public void StartFase07()
     {
         SceneManager.LoadScene("Fase07");
+    }
+    public void StartFase08()
+    {
+        screen1.GetComponent<Animator>().Play("FadeInPerson");
     }
 }

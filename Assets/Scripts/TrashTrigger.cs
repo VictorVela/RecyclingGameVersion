@@ -13,8 +13,11 @@ public class TrashTrigger : MonoBehaviour
     void Start()
     {
         canGenerate = true;
-        sceneControllerGO = GameObject.Find("SceneController");
-        sceneController = sceneControllerGO.GetComponent<SceneController>();
+        if (!gameObject.scene.name.Equals("Fase02"))
+        {
+            sceneControllerGO = GameObject.Find("SceneController");
+            sceneController = sceneControllerGO.GetComponent<SceneController>();
+        }
     }
 
     void Update()

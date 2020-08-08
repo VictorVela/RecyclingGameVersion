@@ -36,6 +36,9 @@ public class Player : MonoBehaviour
     public float startSceneXPosition;
     public float trashCollectorSceneXPosition;
 
+    public int trashInRiver = 0;
+    private bool inRiver;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +49,7 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         isGameRunning = true;
+        inRiver = false;
         isMobile = MobileTest();
     }
 
@@ -59,13 +63,27 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y);
-        trashCollectorPlayer.transform.position = new Vector2(transform.position.x - trashCollectorSceneXPosition, trashCollectorPlayer.transform.position.y);
+        if (!inRiver)
+        {
+            suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y);
+        }
+        else
+        {
+            suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y - 0.8f);
+        }
+        
+        if (!gameObject.scene.name.Equals("Fase02"))
+        {
+            desableSceneP.transform.position = new Vector2(transform.position.x - desableSceneXPosition, desableSceneP.transform.position.y);
+            startSceneP.transform.position = new Vector2(transform.position.x + startSceneXPosition, startSceneP.transform.position.y);
+            trashCollectorPlayer.transform.position = new Vector2(transform.position.x - trashCollectorSceneXPosition, trashCollectorPlayer.transform.position.y);
+        }
+            
         pointsLabel.text = points.ToString();
 
         // OBJETOS PARA TRATAMENTO DE CENA SEGUIREM O PLAYER
-        desableSceneP.transform.position = new Vector2(transform.position.x - desableSceneXPosition, desableSceneP.transform.position.y);
-        startSceneP.transform.position = new Vector2(transform.position.x + startSceneXPosition, startSceneP.transform.position.y);
+        
+        PointScreen.pointPlayer = points;
     }
 
     private void FixedUpdate()
@@ -210,11 +228,18 @@ public class Player : MonoBehaviour
         // ELIMINACAO DO LIXO
         if (collision.gameObject.tag.Equals("Trash") && Input.GetMouseButton(0))
         {
+            if (collision.gameObject.layer.Equals(13))
+            {
+                trashInRiver += 1;
+            }
+
             collision.gameObject.SetActive(false);
             Coin lixinhos = collision.gameObject.GetComponent<Coin>();
             lixinhos.flyToCat = false;
             points += 1;
             GetComponent<AudioSource>().Play();
+
+            
         }
 
         // COLISAO COM O INIMIGO
@@ -229,20 +254,46 @@ public class Player : MonoBehaviour
                 animator.Play("Player_Iddle");
             }
 
-            dataExportTest();
-            collision.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+            //dataExportTest();
+            if (!gameObject.scene.name.Equals("Fase01"))
+            {
+                collision.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+            }
+
             rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+            PointScreen.pointPlayer = points;
             OnPlayerHitted.Invoke();
             isGameRunning = false;
         }
 
         if (collision.gameObject.name.Equals("DeadZone"))
         {
+            PointScreen.pointPlayer = points;
             OnPlayerHitted.Invoke();
             gameObject.SetActive(false);
 
-            dataExportTest();
+            //dataExportTest();
             camera.transform.position = camera.transform.position;
+        }
+
+        if (collision.gameObject.tag.Equals("DeadZone"))
+        {
+            PointScreen.pointPlayer = points;
+            OnPlayerHitted.Invoke();
+            gameObject.SetActive(false);
+
+            //dataExportTest();
+            //camera.transform.position = camera.transform.position;
+        }
+
+        if (collision.gameObject.tag.Equals("NormalTrahSucker"))
+        {
+            inRiver = false;
+        }
+
+        if (collision.gameObject.tag.Equals("Tronco"))
+        {
+            inRiver = true;
         }
     }
 }
