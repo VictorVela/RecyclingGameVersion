@@ -33,23 +33,28 @@ public class Lixo_fabrica : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        if (fase5)
+
+        if (fase8)
         {
-            nivel = 3;
-        }
-        if (fase6)
-        {
-            nivel = 4;
+            nivel = 7;
         }
         if (fase7)
         {
             nivel = 5;
         }
-        if (fase8)
+        if (fase6)
         {
-            nivel = 7;
+            nivel = 4;
         }
+        if (fase5)
+        {
+            nivel = 3;
+        }
+        
+        
+        
+
+        Debug.Log("Seu nivel é: " + nivel);
 
         randomRange = Random.Range(0, nivel);
 
@@ -247,7 +252,7 @@ public class Lixo_fabrica : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(randomRange);
+        
         if (normal == true)
         {
             rb = this.GetComponent<Rigidbody2D>();
