@@ -29,9 +29,18 @@ public class fab_score : MonoBehaviour
         GameOver_fab.GameOver = true;
     }
 
+    public static void GameOverSendScore(int fase, int pontuacao)
+    {
+        GameOver_fab.GameOver = true;
+        Rest_Score score = new Rest_Score();
+       // score.OnSendScore(fase, pontuacao);
+
+    }
+
     public  void NewGame()
     {
-        GameOver_fab.NewGame = true;
+        scoreValue = 0;
+        //GameOver_fab.NewGame = true;
     }
 
 
