@@ -2,7 +2,8 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
+using System;
 
 public class Rest_Client : MonoBehaviour
 {
@@ -20,7 +21,10 @@ public class Rest_Client : MonoBehaviour
 
     readonly string postLoginURL = "https://ciclointegra.com.br/api/jogo/login/";
     
-
+    public enum Scene
+    {
+        Fabrica,
+    }
     //criando instancia e já foi testado
     private void Start()
     {   
@@ -49,7 +53,10 @@ public class Rest_Client : MonoBehaviour
 
     }
 
-
+    internal void OnButtonSendScore(int v1, int v2)
+    {
+        throw new NotImplementedException();
+    }
 
     IEnumerator LoginPostRequest(string my_json)
     {
@@ -88,6 +95,7 @@ public class Rest_Client : MonoBehaviour
                         ano = requestRespond.ano;
                         SaveSystem.SavePlayer(this);// momento onde os dados do jogador é salvo
                         StatusMessage.text = "Entrando no jogo...";
+                        SceneManager.LoadScene("Menu");
                     }
                     else
                     {
