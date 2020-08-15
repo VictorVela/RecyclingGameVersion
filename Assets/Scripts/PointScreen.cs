@@ -13,11 +13,11 @@ public class PointScreen : MonoBehaviour
     {
         if (pointPlayer < 5)
         {
-            points.text = "Só, " + pointPlayer + " sementes? Vamos de novo...";
+            points.text = "Conseguiu " + pointPlayer + " sementes! Vamos de novo?";
         }
         if (pointPlayer < 15 && pointPlayer > 5)
         {
-            points.text = "Da pra melhorar... " + pointPlayer + " sementes!";
+            points.text = "Legal, " + pointPlayer + " sementes!";
         }
         if(pointPlayer < 30 && pointPlayer > 14)
         {
@@ -25,7 +25,7 @@ public class PointScreen : MonoBehaviour
         }
         if(pointPlayer > 30)
         {
-            points.text = "Ótima partida, " + pointPlayer + " sementes!";
+            points.text = "Excelente, " + pointPlayer + " sementes!";
         }
         
     }
