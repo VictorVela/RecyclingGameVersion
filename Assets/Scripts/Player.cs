@@ -220,7 +220,7 @@ public class Player : MonoBehaviour
 
     private void dataExportTest()
     {
-        print(gameObject.scene.name.ToString() + " - " + points + "pontos");
+        print(gameObject.scene.name.ToString() + " - " + points + "sementes");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
