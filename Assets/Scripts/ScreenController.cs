@@ -81,6 +81,8 @@ public class ScreenController : MonoBehaviour
     public void StartFase05()
     {
         //SceneManager.LoadScene("Fase05");
+        levelName = "Fabrica_reciclagem_01";
+        SceneManager.LoadScene(levelName);
     }
     public void StartFase06()
     {
@@ -98,6 +100,8 @@ public class ScreenController : MonoBehaviour
     public void StartFase08()
     {
         //screen1.GetComponent<Animator>().Play("FadeInPerson");
+        levelName = "Fabrica_reciclagem_05";
+        SceneManager.LoadScene(levelName);
     }
 
     public void MouseInsideGirl()
