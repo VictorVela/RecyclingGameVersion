@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class Rest_Score : MonoBehaviour
 {
-    public int numeroFase = 85;
-    public int pontuacaoFase = 300;
+    public int numeroFase;
+    public int pontuacaoFase;
 
     readonly string postScoreURL = "https://ciclointegra.com.br/api/jogo/pontuacao/";
 
