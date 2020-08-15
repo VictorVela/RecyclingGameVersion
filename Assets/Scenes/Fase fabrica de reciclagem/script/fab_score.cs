@@ -7,13 +7,23 @@ using UnityEngine.SceneManagement;
 
 public class fab_score : MonoBehaviour
 {
+    //AUDIO
+    public static AudioClip coinsound;
+    static AudioSource audioSrc;
+
     public Text Scoretext;
     public Text FinalScore;
     public static int scoreValue = 0;
     // Start is called before the first frame update
     void Start()
     {
-       
+        coinsound = Resources.Load<AudioClip>("coins");
+        audioSrc = GetComponent<AudioSource>();
+    }
+
+    public static void playSound()
+    {
+        audioSrc.PlayOneShot(coinsound);
     }
 
     // Update is called once per frame

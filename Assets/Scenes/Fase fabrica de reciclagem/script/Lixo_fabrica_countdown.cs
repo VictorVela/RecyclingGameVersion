@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -12,6 +13,8 @@ public class Lixo_fabrica_countdown : MonoBehaviour
     public bool fase8 = false;
     public float speed = 30.0f;
     public Sprite lata, jornal, plastico, vidro, organico, entulho;
+    
+    
 
 
     //PRIVATE
@@ -26,6 +29,10 @@ public class Lixo_fabrica_countdown : MonoBehaviour
     private bool seta01 = false;
     private bool destroy = false;
 
+    //AUDIO
+    public static AudioClip coinsound;
+    static AudioSource audioSrc;
+
     //CLASS LIXO
     public class UnicLixo
     {
@@ -35,6 +42,8 @@ public class Lixo_fabrica_countdown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
         //Identificar fase
         if (fase8)
         {
@@ -101,6 +110,8 @@ public class Lixo_fabrica_countdown : MonoBehaviour
         }
     }
 
+   
+
     //Verificar colisão
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -113,6 +124,7 @@ public class Lixo_fabrica_countdown : MonoBehaviour
             if (unicLixoPlastico.resultadoLixo == plastico)
             {
                 fab_score.scoreValue += 5;
+                fab_score.playSound();
                 destroy = true;
                 return;
             }
