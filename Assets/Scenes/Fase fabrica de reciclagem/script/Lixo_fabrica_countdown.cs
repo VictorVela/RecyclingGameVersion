@@ -144,6 +144,7 @@ public class Lixo_fabrica_countdown : MonoBehaviour
             if (rend.sprite == lata)
             {
                 fab_score.scoreValue += 5;
+                fab_score.playSound();
                 destroy = true;
             }
             else
@@ -160,6 +161,7 @@ public class Lixo_fabrica_countdown : MonoBehaviour
             if (rend.sprite == jornal)
             {
                 fab_score.scoreValue += 5;
+                fab_score.playSound();
                 destroy = true;
             }
             else
@@ -176,6 +178,7 @@ public class Lixo_fabrica_countdown : MonoBehaviour
             if (rend.sprite == vidro)
             {
                 fab_score.scoreValue += 5;
+                fab_score.playSound();
                 destroy = true;
             }
             else
@@ -192,6 +195,7 @@ public class Lixo_fabrica_countdown : MonoBehaviour
             if (rend.sprite == organico)
             {
                 fab_score.scoreValue += 5;
+                fab_score.playSound();
                 destroy = true;
             }
             else
@@ -208,6 +212,7 @@ public class Lixo_fabrica_countdown : MonoBehaviour
             if (rend.sprite == entulho)
             {
                 fab_score.scoreValue += 5;
+                fab_score.playSound();
                 destroy = true;
             }
             else
