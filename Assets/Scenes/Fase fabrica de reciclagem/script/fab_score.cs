@@ -50,8 +50,12 @@ public class fab_score : MonoBehaviour
     public  void NewGame()
     {
         scoreValue = 0;
-        //GameOver_fab.NewGame = true;
+        GameOver_fab.NewGame = true;
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
 }
