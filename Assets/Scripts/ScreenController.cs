@@ -97,7 +97,8 @@ public class ScreenController : MonoBehaviour
     }
     public void StartFase08()
     {
-        //screen1.GetComponent<Animator>().Play("FadeInPerson");
+        screen3.GetComponent<Animator>().Play("FadeInPerson");
+        levelName = "Fase08";
     }
 
     public void MouseInsideGirl()

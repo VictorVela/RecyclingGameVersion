@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public GameObject desableSceneP;
     public GameObject startSceneP;
     public GameObject trashCollectorPlayer;
+    public GameObject colliderTrashTest;
 
     private bool isGrounded;
     private bool isMobile;
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour
 
     public int trashInRiver = 0;
     private bool inRiver;
+    public bool inBoat;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +53,7 @@ public class Player : MonoBehaviour
         isGameRunning = true;
         inRiver = false;
         isMobile = MobileTest();
+        inBoat = false;
     }
 
     public void SetActive()
@@ -202,6 +205,7 @@ public class Player : MonoBehaviour
                 {
                     if (isGrounded && !isMobile)
                         animator.Play("Player_Iddle");
+                    if(!inBoat)
                     rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y); //CANCELA A FORCA DA CAMINHADA - PAROU DE ANDAR
                 }
             }
@@ -233,6 +237,7 @@ public class Player : MonoBehaviour
                 trashInRiver += 1;
             }
 
+            //print(gameObject.transform.Find("GameObject").gameObject.name);
             collision.gameObject.SetActive(false);
             Coin lixinhos = collision.gameObject.GetComponent<Coin>();
             lixinhos.flyToCat = false;

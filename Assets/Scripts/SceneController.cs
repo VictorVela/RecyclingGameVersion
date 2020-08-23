@@ -7,6 +7,7 @@ public class SceneController : MonoBehaviour
 {
     public GameObject[] scenes; // PREFABS DAS CENAS
     public GameObject nextScenes; // POSICAO PARA INICIAR NOVA CENA
+    public GameObject baseScene; // 
 
     public GameObject[] trashs;
     private GameObject instancia;
@@ -70,7 +71,14 @@ public class SceneController : MonoBehaviour
                 }
                 else
                 {
-                    scenesToSpawn[index].transform.position = nextScenes.transform.position;
+                    if (baseScene.scene.name.Equals("Fase09"))
+                    {
+                        scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 31.81f, 0.48f, baseScene.transform.position.z);
+                    }
+                    else
+                    {
+                        scenesToSpawn[index].transform.position = nextScenes.transform.position;
+                    }
                 }
 
                 //scenePositionBkp = scene.transform;

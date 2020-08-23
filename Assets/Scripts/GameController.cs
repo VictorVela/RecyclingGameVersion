@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     public GameObject MobileControls;
     public GameObject baseScene;
     public Player player;
-    //public Player player2;
+    public Player player2;
     public Timer timer;
     
     private Canvas canvas;
@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
         
         canGenerateAlert = true;
 
-        /*if (PersonSelect.selectedPerson.Equals("Girl"))
+        if (PersonSelect.selectedPerson.Equals("Girl"))
         {
             player.gameObject.SetActive(false);
         }
@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
         {
             player2.gameObject.SetActive(false);
         }
-        */
+        
     }
 
     public void GameOpen()
