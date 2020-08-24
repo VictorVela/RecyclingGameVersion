@@ -94,7 +94,7 @@ public class SceneController : MonoBehaviour
 
     private void testTrashScene2(GameObject scene)
     {
-        if (scene.layer.Equals(9) || scene.layer.Equals(11))
+        if (scene.layer.Equals(9) || scene.layer.Equals(11) || scene.layer.Equals(14))
         {
             if (!instancia)
             {
@@ -138,11 +138,6 @@ public class SceneController : MonoBehaviour
         {
             int index = Random.Range(0, trashsToSpawn.Count - 1);
 
-            //print(index);
-            /*trashsToSpawn[index].gameObject.SetActive(true);
-            trashsToSpawn[index].transform.position = transform.position;
-            trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x, positionTrash.transform.position.y + i * 2);*/
-
             while (true)
             {   
                 if (!trashsToSpawn[index].gameObject.activeInHierarchy) // VERIFICA SE A CENA JA ESTA SENDO UTILIZADA
@@ -158,9 +153,38 @@ public class SceneController : MonoBehaviour
                 }
             }
         }
+        if (instancia.layer.Equals(14))
+            ActivateDoubleTrash();
 
         instancia = instancia2;
         instancia2 = null;
+    }
+
+    public void ActivateDoubleTrash()
+    {
+
+        GameObject positionTrash = instancia.gameObject.transform.Find("TrashGenerator2").gameObject;
+        int cont = Random.Range(3, 6);
+
+        for (int i = 0; i < cont; i++)
+        {
+            int index = Random.Range(0, trashsToSpawn.Count - 1);
+
+            while (true)
+            {
+                if (!trashsToSpawn[index].gameObject.activeInHierarchy) // VERIFICA SE A CENA JA ESTA SENDO UTILIZADA
+                {
+                    trashsToSpawn[index].gameObject.SetActive(true);
+                    trashsToSpawn[index].transform.position = transform.position;
+                    trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x, positionTrash.transform.position.y + i * 2);
+                    break;
+                }
+                else
+                {
+                    index = Random.Range(0, trashsToSpawn.Count - 1);
+                }
+            }
+        }
     }
 
     public void ResetGenerator()

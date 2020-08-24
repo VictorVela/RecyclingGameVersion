@@ -26,6 +26,14 @@ public class SceneDesable : MonoBehaviour
                     resetTrashTriggers();
                 }
             }
+            else if(scene.layer.Equals(14))
+            {
+                trashTrigger = scene.gameObject.transform.Find("TrashTrigger").gameObject;
+                if (trashTrigger)
+                {
+                    resetTrashTriggers();
+                }
+            }
             else if (scene.layer.Equals(10))
             {
                 enemyTrigger = scene.gameObject.transform.Find("EnemyTrigger").gameObject;

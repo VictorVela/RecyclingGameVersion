@@ -2814,6 +2814,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Girl
       objectReference: {fileID: 0}
+    - target: {fileID: 6619192382768493171, guid: 86c28efbdae4fc444bcfbceeab874641,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86c28efbdae4fc444bcfbceeab874641, type: 3}
 --- !u!114 &1491357840 stripped

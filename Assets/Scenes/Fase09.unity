@@ -4457,6 +4457,80 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1464155655
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 377185929219446347, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_Name
+      value: Scene4
+      objectReference: {fileID: 0}
+    - target: {fileID: 377185929219446347, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858149872463420272, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 37.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858149872463420272, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858149872463420272, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.234375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858149872463420272, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858149872463420272, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858149872463420272, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858149872463420272, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858149872463420272, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858149872463420272, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858149872463420272, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858149872463420272, guid: 840bd46b5a640994ea50a4bca76f9a90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 840bd46b5a640994ea50a4bca76f9a90, type: 3}
 --- !u!1 &1467399446
 GameObject:
   m_ObjectHideFlags: 0
@@ -4952,8 +5026,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622491125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: -1.47, z: -12.093601}
-  m_LocalScale: {x: 10.3125, y: 0.425, z: 1}
+  m_LocalPosition: {x: 3.66, y: -1.47, z: -12.093601}
+  m_LocalScale: {x: 27.070312, y: 0.425, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -5086,14 +5160,15 @@ MonoBehaviour:
   - {fileID: 312027302667254862, guid: 28d1f0e37b5a03c4d9e6c8d5b70ef9ed, type: 3}
   - {fileID: 424509944764140206, guid: 8b0c3e81649a7cc4a8a2c1c28f7539eb, type: 3}
   - {fileID: 2451992694262835482, guid: fcf8c93ff07823c46ad729c7f9fafeba, type: 3}
+  - {fileID: 377185929219446347, guid: 840bd46b5a640994ea50a4bca76f9a90, type: 3}
   nextScenes: {fileID: 0}
   baseScene: {fileID: 569178326}
   trashs:
-  - {fileID: 2976348284011635158, guid: c34821bed4e4ec04ba4234299a3ff007, type: 3}
-  - {fileID: 6895870960570258296, guid: f9474272215651e4aa8b630ded6e1303, type: 3}
-  - {fileID: 8549927605343123447, guid: b6a6d93b81d1d0c4093a6a124f131077, type: 3}
-  - {fileID: 6839221244775379401, guid: 5593ecad6c516354284f77faa383f528, type: 3}
-  - {fileID: 6290167548857739770, guid: 8abb30dfd1ea26744b0072e14944a56c, type: 3}
+  - {fileID: 404785958}
+  - {fileID: 711656474}
+  - {fileID: 1120477833}
+  - {fileID: 73658383}
+  - {fileID: 914248183}
   scenePositionBkp: {x: 0, y: 0, z: 0}
   trashsToSpawn: []
   scenesToSpawn: []
