@@ -55,11 +55,21 @@ public class BoatHorizontal : MonoBehaviour
             collision.gameObject.GetComponent<Player>().inBoat = true;
             collision.transform.parent = gameObject.transform;
         }
+        if (collision.gameObject.name.Equals("Girl"))
+        {
+            collision.gameObject.GetComponent<Player>().inBoat = true;
+            collision.transform.parent = gameObject.transform;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.name.Equals("Player"))
+        {
+            collision.gameObject.GetComponent<Player>().inBoat = false;
+            collision.transform.parent = null;
+        }
+        if (collision.gameObject.name.Equals("Girl"))
         {
             collision.gameObject.GetComponent<Player>().inBoat = false;
             collision.transform.parent = null;

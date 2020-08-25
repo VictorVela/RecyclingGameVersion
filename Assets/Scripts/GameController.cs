@@ -43,9 +43,11 @@ public class GameController : MonoBehaviour
         if (PersonSelect.selectedPerson.Equals("Girl"))
         {
             player.gameObject.SetActive(false);
+            player2.gameObject.SetActive(true);
         }
         else
         {
+            player.gameObject.SetActive(true);
             player2.gameObject.SetActive(false);
         }
         

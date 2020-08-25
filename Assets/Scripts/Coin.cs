@@ -47,16 +47,19 @@ public class Coin : MonoBehaviour {
 		if (buttonGO)
 			print(button.pressing);
 
-		if (flyToCat && Input.GetMouseButton(0)) {
+		if (flyToCat && Input.GetMouseButton(0))
+		{
 			catDirection = - (transform.position - player.gameObject.GetComponent<Player>().colliderTrashTest.transform.position).normalized;
-			rb.velocity = new Vector2 (catDirection.x, catDirection.y) * 58f * (Time.time / timeStamp);
+			rb.velocity = new Vector2 (catDirection.x, catDirection.y) * 38f * (Time.time / timeStamp);
 			
 		}
 
 		Collider2D[] objetosNoRaioDeAlcance = Physics2D.OverlapCircleAll(transform.position, 0.06f, 1);
 		foreach (Collider2D targetCollider in objetosNoRaioDeAlcance)
 		{
-			if (Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Player") || Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Boy"))
+			if (Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Player") 
+				|| Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Boy") 
+				|| Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Girl"))
 			{
 				targetCollider.gameObject.GetComponent<Player>().points += 1;
 
@@ -69,7 +72,7 @@ public class Coin : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.name.Equals ("SuckerTrash")) {
+		if (col.gameObject.name.Equals ("SuckerTrash") || col.gameObject.name.Equals("SuckerTrashByGirl")) {
 			timeStamp = Time.time;
 			player = GameObject.Find ("Player");
 			flyToCat = true;

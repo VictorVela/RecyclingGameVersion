@@ -49,7 +49,7 @@ public class TrashTrigger : MonoBehaviour
 
         if (collision.gameObject.name.Equals("Girl") && canGenerate) //GATILHO PARA GERAR O LIXO
         {
-            trashGenerator.ActivateMethods();
+            sceneController.ActivateTrash();
             //sceneController.ActivateTrash();
             canGenerate = false;
         }

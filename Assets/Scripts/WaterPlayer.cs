@@ -28,5 +28,10 @@ public class WaterPlayer : MonoBehaviour
             collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
             collision.gameObject.GetComponent<Rigidbody2D>().mass = 1.7f;
         }
+        if (collision.gameObject.name.Equals("Girl"))
+        {
+            collision.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+            collision.gameObject.GetComponent<Rigidbody2D>().mass = 1.7f;
+        }
     }
 }

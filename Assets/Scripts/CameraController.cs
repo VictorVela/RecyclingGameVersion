@@ -35,12 +35,19 @@ public class CameraController : MonoBehaviour
     {
         if (player != null)
         {
+           
+
             limitedLeft = playerObj.bkpCamera;
 
             playerX = Mathf.Clamp(player.position.x + offsetX, limitedLeft, limitedRight);
             playerY = Mathf.Clamp(player.position.y, limitedDown, limitedUp);
 
             transform.position = Vector3.Lerp(transform.position, new Vector3(playerX, playerY, transform.position.z), smooth);
+        }
+        else
+        {
+            player = FindObjectOfType<Player>().transform;
+            playerObj = player.GetComponent<Player>();
         }
 
         /*if (player != null)
