@@ -1466,8 +1466,8 @@ MonoBehaviour:
   buttonRun: {fileID: 726471349}
   MobileControls: {fileID: 2035450544}
   baseScene: {fileID: 0}
-  player: {fileID: 1777528123}
-  player2: {fileID: 922699669}
+  player: {fileID: 922699669}
+  player2: {fileID: 1777528123}
   timer: {fileID: 2025918852}
   canGenerateAlert: 0
 --- !u!4 &463925976
@@ -3706,6 +3706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnPlayerHitted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6619192382768493167, guid: 86c28efbdae4fc444bcfbceeab874641,
+        type: 3}
+      propertyPath: startSceneXPosition
+      value: 35.49
       objectReference: {fileID: 0}
     - target: {fileID: 6619192382768493171, guid: 86c28efbdae4fc444bcfbceeab874641,
         type: 3}

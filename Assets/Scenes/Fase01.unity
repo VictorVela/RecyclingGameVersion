@@ -2486,8 +2486,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.052848104, y: -0.008199222}
-  m_Size: {x: 5.4112034, y: 2.3635318}
+  m_Offset: {x: 0.1082485, y: 0.15153039}
+  m_Size: {x: 6.3955007, y: 3.04049}
   m_Direction: 1
 --- !u!4 &1382312980
 Transform:
@@ -3035,6 +3035,11 @@ PrefabInstance:
       propertyPath: jumpSpeed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3597505094412994615, guid: 756f6eff23f49a14880c9e51b5bb6d59,
+        type: 3}
+      propertyPath: colliderTrashTest
+      value: 
+      objectReference: {fileID: 1550401493}
     - target: {fileID: 3597505094412994621, guid: 756f6eff23f49a14880c9e51b5bb6d59,
         type: 3}
       propertyPath: m_Name
@@ -3047,6 +3052,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 756f6eff23f49a14880c9e51b5bb6d59, type: 3}
+--- !u!1 &1550401493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8735695797482795572, guid: 756f6eff23f49a14880c9e51b5bb6d59,
+    type: 3}
+  m_PrefabInstance: {fileID: 1550401492}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1583859884 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6968893229917817376, guid: 4298a112cc814f340a8b5096c8fc5cef,
@@ -4135,10 +4146,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2.5
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 5c397d87f7c92984e8714db0c132e3e2, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1

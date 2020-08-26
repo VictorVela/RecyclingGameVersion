@@ -28,6 +28,11 @@ public class CameraControllerLivre : MonoBehaviour
     {
         if (player != null)
         {
+            if (PersonSelect.selectedPerson.Equals("Girl") && gameObject.scene.name.Equals("Fase02") && player.name.Equals("Boy"))
+            {
+                player = GameObject.Find("Girl").GetComponent<Transform>();
+            }
+
             playerX = Mathf.Clamp(player.position.x + offsetX, limitedLeft, limitedRight);
             playerY = Mathf.Clamp(player.position.y, limitedDown, limitedUp);
 

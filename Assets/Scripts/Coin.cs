@@ -50,7 +50,7 @@ public class Coin : MonoBehaviour {
 		if (flyToCat && Input.GetMouseButton(0))
 		{
 			catDirection = - (transform.position - player.gameObject.GetComponent<Player>().colliderTrashTest.transform.position).normalized;
-			rb.velocity = new Vector2 (catDirection.x, catDirection.y) * 38f * (Time.time / timeStamp);
+			rb.velocity = new Vector2 (catDirection.x, catDirection.y) * 48f * (Time.time / timeStamp);
 			
 		}
 

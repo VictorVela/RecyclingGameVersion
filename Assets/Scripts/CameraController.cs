@@ -23,6 +23,11 @@ public class CameraController : MonoBehaviour
     {
         player = FindObjectOfType<Player>().transform;
         playerObj = player.GetComponent<Player>();
+
+        /*if (PersonSelect.selectedPerson.Equals("Girl") && gameObject.scene.name.Equals("Fase04"))
+        {
+            playerObj = GameObject.Find("Girl").GetComponent<Player>();
+        }*/
     }
 
     // Update is called once per frame
@@ -34,8 +39,12 @@ public class CameraController : MonoBehaviour
     private void FixedUpdate()
     {
         if (player != null)
-        {
-           
+        {   
+            if (PersonSelect.selectedPerson.Equals("Girl") && gameObject.scene.name.Equals("Fase04") && playerObj.name.Equals("Player") ||
+                PersonSelect.selectedPerson.Equals("Girl") && gameObject.scene.name.Equals("Fase09") && playerObj.name.Equals("Player"))
+            {
+                playerObj = GameObject.Find("Girl").GetComponent<Player>();
+            }
 
             limitedLeft = playerObj.bkpCamera;
 

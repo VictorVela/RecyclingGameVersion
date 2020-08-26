@@ -40,5 +40,11 @@ public class EnemyTriguer : MonoBehaviour
             enemyAn.Play("Enemy_Rolling");
             canRolling = false;
         }
+        if (collision.gameObject.name.Equals("Girl") && canRolling)
+        {
+            enemyRB.AddForce(new Vector2(-27000, 0));
+            enemyAn.Play("Enemy_Rolling");
+            canRolling = false;
+        }
     }
 }
