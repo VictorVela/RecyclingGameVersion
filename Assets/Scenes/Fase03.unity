@@ -528,7 +528,7 @@ PrefabInstance:
     - target: {fileID: 6619192382768493171, guid: 86c28efbdae4fc444bcfbceeab874641,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86c28efbdae4fc444bcfbceeab874641, type: 3}
@@ -3960,6 +3960,9 @@ MonoBehaviour:
   limitedDown: 0
   limitedLeft: -8
   limitedRight: 10000
+  playerObj: {fileID: 0}
+  boy: {fileID: 418257926}
+  girl: {fileID: 193368561}
 --- !u!114 &2046607522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3978,6 +3981,8 @@ MonoBehaviour:
   limitedDown: 0
   limitedLeft: -8
   limitedRight: 10000
+  boy: {fileID: 0}
+  girl: {fileID: 0}
 --- !u!1001 &2053110351
 PrefabInstance:
   m_ObjectHideFlags: 0

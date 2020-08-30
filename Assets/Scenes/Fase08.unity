@@ -1184,6 +1184,9 @@ MonoBehaviour:
   limitedDown: 0
   limitedLeft: -8
   limitedRight: 10000
+  playerObj: {fileID: 0}
+  boy: {fileID: 827195105}
+  girl: {fileID: 498098354}
 --- !u!1 &882047674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,7 +3091,7 @@ PrefabInstance:
     - target: {fileID: 6619192382768493171, guid: 86c28efbdae4fc444bcfbceeab874641,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86c28efbdae4fc444bcfbceeab874641, type: 3}

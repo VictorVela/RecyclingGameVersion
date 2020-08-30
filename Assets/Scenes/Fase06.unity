@@ -1466,8 +1466,8 @@ MonoBehaviour:
   buttonRun: {fileID: 726471349}
   MobileControls: {fileID: 2035450544}
   baseScene: {fileID: 0}
-  player: {fileID: 922699669}
-  player2: {fileID: 1777528123}
+  player: {fileID: 1777528123}
+  player2: {fileID: 922699669}
   timer: {fileID: 2025918852}
   canGenerateAlert: 0
 --- !u!4 &463925976
@@ -2090,6 +2090,9 @@ MonoBehaviour:
   limitedDown: 0
   limitedLeft: -8
   limitedRight: 10000
+  playerObj: {fileID: 0}
+  boy: {fileID: 1777528123}
+  girl: {fileID: 922699669}
 --- !u!1 &568936662 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 133736224694969231, guid: cb6db8546e2df7b40a015d9a783e0e46,
@@ -3720,7 +3723,7 @@ PrefabInstance:
     - target: {fileID: 6619192382768493171, guid: 86c28efbdae4fc444bcfbceeab874641,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86c28efbdae4fc444bcfbceeab874641, type: 3}
@@ -6240,11 +6243,16 @@ MonoBehaviour:
   nextScenes: {fileID: 0}
   baseScene: {fileID: 1793903904}
   trashs:
-  - {fileID: 2976348284011635158, guid: c34821bed4e4ec04ba4234299a3ff007, type: 3}
-  - {fileID: 6895870960570258296, guid: f9474272215651e4aa8b630ded6e1303, type: 3}
-  - {fileID: 8549927605343123447, guid: b6a6d93b81d1d0c4093a6a124f131077, type: 3}
-  - {fileID: 6839221244775379401, guid: 5593ecad6c516354284f77faa383f528, type: 3}
-  - {fileID: 6290167548857739770, guid: 8abb30dfd1ea26744b0072e14944a56c, type: 3}
+  - {fileID: 7797571964430863, guid: 2122da607bfe6e041945403fb6ff4a56, type: 3}
+  - {fileID: 8783119582344773473, guid: 0f2720395231c5e4b99052be82e8a0f7, type: 3}
+  - {fileID: 5935960191873888531, guid: 025cc25af47e97148a692634f9be4983, type: 3}
+  - {fileID: 1818278927847584799, guid: 68080717324586242a0a9aeb11e35d18, type: 3}
+  - {fileID: 2984598406252555076, guid: 7d405b18f92e4934db52c042e8eff3d3, type: 3}
+  - {fileID: 2881628802023239972, guid: 4a6c7135681e2b8428aa7b9a3aa3f083, type: 3}
+  - {fileID: 2093194874250412761, guid: 5e30f41b8531f164894930b1bcfb9c9d, type: 3}
+  - {fileID: 7435517392920095149, guid: 7f9a0d4408329b241b3335419e567aa0, type: 3}
+  - {fileID: 2187009277852790522, guid: 87667a9f64f80ac44942179e6fd7a314, type: 3}
+  - {fileID: 4673189671580330649, guid: cfd8cfa18f4c70048b509eae149589a6, type: 3}
   scenePositionBkp: {x: 0, y: 0, z: 0}
   trashsToSpawn: []
   scenesToSpawn: []

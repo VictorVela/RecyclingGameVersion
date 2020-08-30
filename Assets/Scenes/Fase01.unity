@@ -3287,6 +3287,9 @@ MonoBehaviour:
   limitedDown: 0
   limitedLeft: 0
   limitedRight: 9000
+  playerObj: {fileID: 0}
+  boy: {fileID: 26070069}
+  girl: {fileID: 2088162396}
 --- !u!1001 &1836909538
 PrefabInstance:
   m_ObjectHideFlags: 0

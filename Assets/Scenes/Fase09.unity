@@ -290,6 +290,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PV2
       objectReference: {fileID: 0}
+    - target: {fileID: 6895870960570258296, guid: f9474272215651e4aa8b630ded6e1303,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6895870960570258297, guid: f9474272215651e4aa8b630ded6e1303,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1042,6 +1047,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PV3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549927605343123447, guid: b6a6d93b81d1d0c4093a6a124f131077,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8549927605343123450, guid: b6a6d93b81d1d0c4093a6a124f131077,
         type: 3}
@@ -2075,6 +2085,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PV4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839221244775379401, guid: 5593ecad6c516354284f77faa383f528,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5593ecad6c516354284f77faa383f528, type: 3}
@@ -3303,6 +3318,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PV1
       objectReference: {fileID: 0}
+    - target: {fileID: 2976348284011635158, guid: c34821bed4e4ec04ba4234299a3ff007,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c34821bed4e4ec04ba4234299a3ff007, type: 3}
 --- !u!1 &1112913108
@@ -3740,8 +3760,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.075259216, y: -0.008199225}
-  m_Size: {x: 4.245789, y: 2.363545}
+  m_Offset: {x: 0.37859684, y: 0.10390577}
+  m_Size: {x: 4.8524876, y: 2.1393456}
   m_Direction: 1
 --- !u!4 &1142566451
 Transform:
@@ -4178,7 +4198,7 @@ PrefabInstance:
     - target: {fileID: 6619192382768493171, guid: 86c28efbdae4fc444bcfbceeab874641,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86c28efbdae4fc444bcfbceeab874641, type: 3}
@@ -4296,13 +4316,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716aec5731b065c47a227ec00134bfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 3
+  offsetX: 1
   offsetY: 2
   smooth: 0.1
   limitedUp: 0
   limitedDown: 0
   limitedLeft: -8
   limitedRight: 100
+  playerObj: {fileID: 0}
+  boy: {fileID: 1116040543}
+  girl: {fileID: 1292472192}
 --- !u!1 &1335587306
 GameObject:
   m_ObjectHideFlags: 0
@@ -5330,6 +5353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PV5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290167548857739770, guid: 8abb30dfd1ea26744b0072e14944a56c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6290167548857739771, guid: 8abb30dfd1ea26744b0072e14944a56c,
         type: 3}

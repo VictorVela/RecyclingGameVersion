@@ -710,6 +710,8 @@ MonoBehaviour:
   limitedDown: -3.49
   limitedLeft: -3.5
   limitedRight: 67
+  boy: {fileID: 911391594}
+  girl: {fileID: 1160892542}
 --- !u!1001 &89189501
 PrefabInstance:
   m_ObjectHideFlags: 0
