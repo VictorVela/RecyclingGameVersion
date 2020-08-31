@@ -15,6 +15,7 @@ public class Coin : MonoBehaviour {
 
 	void Start()
 	{
+		player = FindObjectOfType<Player>().gameObject;
 		rb = GetComponent<Rigidbody2D> ();
 		buttonGO = GameObject.Find("/Canvas/MobileControls/ButtonSucker");
 		if(buttonGO)
@@ -37,15 +38,11 @@ public class Coin : MonoBehaviour {
 
     void Update()
 	{
-		player = FindObjectOfType<Player>().gameObject;
 
 		if(player.transform.position.x > gameObject.transform.position.x && player.GetComponent<SpriteRenderer>().flipX.Equals(false))
         {
 			flyToCat = false;
         }
-
-		if (buttonGO)
-			print(button.pressing);
 
 		if (flyToCat && Input.GetMouseButton(0))
 		{
