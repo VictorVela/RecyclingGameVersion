@@ -76,7 +76,8 @@ public class ScreenController : MonoBehaviour
         //SceneManager.LoadScene("Fase03");
         screen3.GetComponent<Animator>().Play("FadeInPerson2");
         screen1.GetComponent<Animator>().Play("FadeOut");
-        levelName = "Fase03";
+        //levelName = "Fase03";
+        levelName = "Fase04";
         gameObject.GetComponent<AudioSource>().Stop();
         screen3.GetComponent<AudioSource>().Play();
     }
@@ -86,20 +87,28 @@ public class ScreenController : MonoBehaviour
         //SceneManager.LoadScene("Fase04");
         screen3.GetComponent<Animator>().Play("FadeInPerson2");
         screen1.GetComponent<Animator>().Play("FadeOut");
-        levelName = "Fase04";
+        //levelName = "Fase04";
+        levelName = "Fase06";
         gameObject.GetComponent<AudioSource>().Stop();
         screen3.GetComponent<AudioSource>().Play();
     }
     public void StartFase05()
     {
         //SceneManager.LoadScene("Fase05");
+        screen3.GetComponent<Animator>().Play("FadeInPerson2");
+        screen1.GetComponent<Animator>().Play("FadeOut");
+        //levelName = "Fase04";
+        levelName = "Fase07";
+        gameObject.GetComponent<AudioSource>().Stop();
+        screen3.GetComponent<AudioSource>().Play();
     }
     public void StartFase06()
     {
         //SceneManager.LoadScene("Fase06");
         screen3.GetComponent<Animator>().Play("FadeInPerson2");
         screen2.GetComponent<Animator>().Play("FadeOut2");
-        levelName = "Fase06";
+        //levelName = "Fase06";
+        levelName = "Fase09";
         gameObject.GetComponent<AudioSource>().Stop();
         screen3.GetComponent<AudioSource>().Play();
     }
@@ -109,25 +118,26 @@ public class ScreenController : MonoBehaviour
         //SceneManager.LoadScene("Fase07");
         screen3.GetComponent<Animator>().Play("FadeInPerson2");
         screen2.GetComponent<Animator>().Play("FadeOut2");
-        levelName = "Fase07";
+        //levelName = "Fase07";
+        levelName = "Fase10";
         gameObject.GetComponent<AudioSource>().Stop();
         screen3.GetComponent<AudioSource>().Play();
     }
     public void StartFase08()
     {
-        screen3.GetComponent<Animator>().Play("FadeInPerson2");
+        /*screen3.GetComponent<Animator>().Play("FadeInPerson2");
         screen2.GetComponent<Animator>().Play("FadeOut2");
         levelName = "Fase08";
         gameObject.GetComponent<AudioSource>().Stop();
-        screen3.GetComponent<AudioSource>().Play();
+        screen3.GetComponent<AudioSource>().Play();*/
     }
     public void StartFase09()
     {
-        screen3.GetComponent<Animator>().Play("FadeInPerson2");
+        /*screen3.GetComponent<Animator>().Play("FadeInPerson2");
         screen2.GetComponent<Animator>().Play("FadeOut2");
         levelName = "Fase09";
         gameObject.GetComponent<AudioSource>().Stop();
-        screen3.GetComponent<AudioSource>().Play();
+        screen3.GetComponent<AudioSource>().Play();*/
     }
 
     public void MouseInsideGirl()

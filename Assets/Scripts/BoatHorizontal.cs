@@ -52,13 +52,17 @@ public class BoatHorizontal : MonoBehaviour
         }
         if (collision.gameObject.name.Equals("Player"))
         {
+            GetComponent<AudioSource>().Play();
             collision.gameObject.GetComponent<Player>().inBoat = true;
             collision.transform.parent = gameObject.transform;
+            
         }
         if (collision.gameObject.name.Equals("Girl"))
         {
+            GetComponent<AudioSource>().Play();
             collision.gameObject.GetComponent<Player>().inBoat = true;
             collision.transform.parent = gameObject.transform;
+           
         }
     }
 
@@ -73,6 +77,7 @@ public class BoatHorizontal : MonoBehaviour
         {
             collision.gameObject.GetComponent<Player>().inBoat = false;
             collision.transform.parent = null;
+            
         }
     }
 }

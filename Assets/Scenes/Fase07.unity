@@ -298,6 +298,11 @@ PrefabInstance:
       propertyPath: jumpSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3597505094412994615, guid: 756f6eff23f49a14880c9e51b5bb6d59,
+        type: 3}
+      propertyPath: colliderTrashTest
+      value: 
+      objectReference: {fileID: 2138256960}
     - target: {fileID: 3597505094412994621, guid: 756f6eff23f49a14880c9e51b5bb6d59,
         type: 3}
       propertyPath: m_Name
@@ -2387,6 +2392,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 133736224694969231, guid: cb6db8546e2df7b40a015d9a783e0e46,
     type: 3}
   m_PrefabInstance: {fileID: 2101237524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2138256960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8735695797482795572, guid: 756f6eff23f49a14880c9e51b5bb6d59,
+    type: 3}
+  m_PrefabInstance: {fileID: 97348162}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &707494717329953955
 PrefabInstance:

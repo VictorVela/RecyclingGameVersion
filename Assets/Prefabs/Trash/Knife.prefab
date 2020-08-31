@@ -40,7 +40,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 3047618516869268626}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 5c397d87f7c92984e8714db0c132e3e2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -56,7 +56,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 3.7872148}
+    - - {x: 0.15107675, y: 3.705562}
+      - {x: 0.08101763, y: 3.794945}
+      - {x: -0.0044277725, y: 3.8085103}
+      - {x: -0.077793725, y: 3.7881033}
+      - {x: -0.1490054, y: 3.7109845}
       - {x: -0.95105654, y: 0.30901697}
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}

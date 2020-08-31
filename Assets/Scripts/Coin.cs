@@ -38,8 +38,10 @@ public class Coin : MonoBehaviour {
 
     void Update()
 	{
+		//if(gameObject.scene.name.Equals("Fase02"))
+		player = FindObjectOfType<Player>().gameObject;
 
-		if(player.transform.position.x > gameObject.transform.position.x && player.GetComponent<SpriteRenderer>().flipX.Equals(false))
+		if (player.transform.position.x > gameObject.transform.position.x && player.GetComponent<SpriteRenderer>().flipX.Equals(false))
         {
 			flyToCat = false;
         }
