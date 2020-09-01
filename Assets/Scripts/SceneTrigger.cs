@@ -20,6 +20,13 @@ public class SceneTrigger : MonoBehaviour
     {
         if (collision.gameObject.name.Equals("Player") && canGenerate)
         {
+            //print(collision.transform.position.x);
+            obj.AcvateScene();
+            canGenerate = false;
+        }
+        if (collision.gameObject.name.Equals("Girl") && canGenerate)
+        {
+            //print(collision.transform.position.x);
             obj.AcvateScene();
             canGenerate = false;
         }

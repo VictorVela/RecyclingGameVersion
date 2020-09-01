@@ -13,6 +13,8 @@ public class CameraControllerLivre : MonoBehaviour
     public float limitedRight = 100f;
 
     private Transform player;
+    public Player boy;
+    public Player girl;
     private float playerX;
     private float playerY;
 
@@ -20,7 +22,18 @@ public class CameraControllerLivre : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<Player>().transform;
+        if (PersonSelect.selectedPerson.Equals("Girl"))
+        {
+            player = girl.transform;
+        }
+        else if (PersonSelect.selectedPerson.Equals("Boy") && !gameObject.scene.name.Equals("Fase02"))
+        {
+            player = boy.transform;
+        }
+        else if (PersonSelect.selectedPerson.Equals("Boy") && gameObject.scene.name.Equals("Fase02"))
+        {
+            player = boy.transform;
+        }
     }
 
     // Update is called once per frame

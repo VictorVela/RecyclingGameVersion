@@ -25,6 +25,7 @@ TagManager:
   - Water
   - Tronco
   - NormalTrahSucker
+  - LimitBoat
   layers:
   - Default
   - TransparentFX
@@ -40,7 +41,7 @@ TagManager:
   - TrashAndEnemyScene
   - Plataform
   - TrashInRiver
-  - 
+  - DoubleTrashScene
   - 
   - 
   - 

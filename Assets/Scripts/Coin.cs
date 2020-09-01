@@ -15,6 +15,7 @@ public class Coin : MonoBehaviour {
 
 	void Start()
 	{
+		player = FindObjectOfType<Player>().gameObject;
 		rb = GetComponent<Rigidbody2D> ();
 		buttonGO = GameObject.Find("/Canvas/MobileControls/ButtonSucker");
 		if(buttonGO)
@@ -27,46 +28,50 @@ public class Coin : MonoBehaviour {
         {
 			if (flyToCat && button.pressing)
 			{
+				//catDirection = -(transform.position - player.gameObject.GetComponent<Player>().colliderTrashTest.transform.position).normalized;
 				catDirection = -(transform.position - player.transform.position).normalized;
-				rb.velocity = new Vector2(catDirection.x, catDirection.y) * 6f * (Time.time / timeStamp);
+				rb.velocity = new Vector2(catDirection.x, catDirection.y) * 48f * (Time.time / timeStamp);
+				
 			}
 		}
 	}
 
     void Update()
 	{
+		//if(gameObject.scene.name.Equals("Fase02"))
 		player = FindObjectOfType<Player>().gameObject;
 
-		if(player.transform.position.x > gameObject.transform.position.x && player.GetComponent<SpriteRenderer>().flipX.Equals(false))
+		if (player.transform.position.x > gameObject.transform.position.x && player.GetComponent<SpriteRenderer>().flipX.Equals(false))
         {
 			flyToCat = false;
         }
 
-		if (buttonGO)
-			print(button.pressing);
-
-		if (flyToCat && Input.GetMouseButton(0)) {
-			catDirection = - (transform.position - player.transform.position).normalized;
-			rb.velocity = new Vector2 (catDirection.x, catDirection.y) * 6f * (Time.time / timeStamp);
+		if (flyToCat && Input.GetMouseButton(0))
+		{
+			catDirection = - (transform.position - player.gameObject.GetComponent<Player>().colliderTrashTest.transform.position).normalized;
+			rb.velocity = new Vector2 (catDirection.x, catDirection.y) * 48f * (Time.time / timeStamp);
+			
 		}
 
 		Collider2D[] objetosNoRaioDeAlcance = Physics2D.OverlapCircleAll(transform.position, 0.06f, 1);
 		foreach (Collider2D targetCollider in objetosNoRaioDeAlcance)
 		{
-			if (Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Player") || Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Boy"))
+			if (Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Player") 
+				|| Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Boy") 
+				|| Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Girl"))
 			{
 				targetCollider.gameObject.GetComponent<Player>().points += 1;
 
 				gameObject.SetActive(false);
 				flyToCat = false;
-
+				player.GetComponent<AudioSource>().Play();
 			}
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.name.Equals ("SuckerTrash")) {
+		if (col.gameObject.name.Equals ("SuckerTrash") || col.gameObject.name.Equals("SuckerTrashByGirl")) {
 			timeStamp = Time.time;
 			player = GameObject.Find ("Player");
 			flyToCat = true;

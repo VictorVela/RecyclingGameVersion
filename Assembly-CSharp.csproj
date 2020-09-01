@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\countdown.cs" />
     <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\fab_score.cs" />
     <Compile Include="Assets\Scenes\Fase fabrica de reciclagem\script\seta_click.cs" />
+    <Compile Include="Assets\Scripts\BoatHorizontal.cs" />
     <Compile Include="Assets\Scripts\Boy.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CameraControllerLivre.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PointScreen.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />
+    <Compile Include="Assets\Scripts\SceneControllerNEW.cs" />
     <Compile Include="Assets\Scripts\SceneDesable.cs" />
     <Compile Include="Assets\Scripts\SceneTrigger.cs" />
     <Compile Include="Assets\Scripts\ScreenController.cs" />

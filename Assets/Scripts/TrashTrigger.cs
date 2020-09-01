@@ -40,9 +40,16 @@ public class TrashTrigger : MonoBehaviour
             canGenerate = false;
         }
 
-        if (collision.gameObject.name.Equals("Boy") && canGenerate) //GATILHO PARA GERAR O LIXO
+        if (collision.gameObject.name.Equals("Boy") && canGenerate || collision.gameObject.name.Equals("Girl") && collision.gameObject.scene.name.Equals("Fase02") && canGenerate) //GATILHO PARA GERAR O LIXO
         {
             trashGenerator.ActivateMethods();
+            //sceneController.ActivateTrash();
+            canGenerate = false;
+        }
+
+        if (collision.gameObject.name.Equals("Girl") && canGenerate && !collision.gameObject.scene.name.Equals("Fase02")) //GATILHO PARA GERAR O LIXO
+        {
+            sceneController.ActivateTrash();
             //sceneController.ActivateTrash();
             canGenerate = false;
         }

@@ -7,6 +7,7 @@ public class SceneController : MonoBehaviour
 {
     public GameObject[] scenes; // PREFABS DAS CENAS
     public GameObject nextScenes; // POSICAO PARA INICIAR NOVA CENA
+    public GameObject baseScene; // 
 
     public GameObject[] trashs;
     private GameObject instancia;
@@ -70,7 +71,18 @@ public class SceneController : MonoBehaviour
                 }
                 else
                 {
-                    scenesToSpawn[index].transform.position = nextScenes.transform.position;
+                    if (baseScene.scene.name.Equals("Fase09"))
+                    {
+                        scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 31.81f, 0.48f, baseScene.transform.position.z);
+                    }
+                    else if (baseScene.scene.name.Equals("Fase10"))
+                    {
+                        scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 29.10f, baseScene.transform.position.y, baseScene.transform.position.z);
+                    }
+                    else
+                    {
+                        scenesToSpawn[index].transform.position = nextScenes.transform.position;
+                    }
                 }
 
                 //scenePositionBkp = scene.transform;
@@ -86,7 +98,7 @@ public class SceneController : MonoBehaviour
 
     private void testTrashScene2(GameObject scene)
     {
-        if (scene.layer.Equals(9) || scene.layer.Equals(11))
+        if (scene.layer.Equals(9) || scene.layer.Equals(11) || scene.layer.Equals(14))
         {
             if (!instancia)
             {
@@ -130,13 +142,40 @@ public class SceneController : MonoBehaviour
         {
             int index = Random.Range(0, trashsToSpawn.Count - 1);
 
-            //print(index);
-            /*trashsToSpawn[index].gameObject.SetActive(true);
-            trashsToSpawn[index].transform.position = transform.position;
-            trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x, positionTrash.transform.position.y + i * 2);*/
-
             while (true)
             {   
+                if (!trashsToSpawn[index].gameObject.activeInHierarchy) // VERIFICA SE A CENA JA ESTA SENDO UTILIZADA
+                {
+                    trashsToSpawn[index].gameObject.SetActive(true);
+                    trashsToSpawn[index].transform.position = transform.position;
+                    trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x + (i/2), positionTrash.transform.position.y + i * 2);
+                    break;
+                }
+                else
+                {
+                    index = Random.Range(0, trashsToSpawn.Count - 1);
+                }
+            }
+        }
+        if (instancia.layer.Equals(14))
+            ActivateDoubleTrash();
+
+        instancia = instancia2;
+        instancia2 = null;
+    }
+
+    public void ActivateDoubleTrash()
+    {
+
+        GameObject positionTrash = instancia.gameObject.transform.Find("TrashGenerator2").gameObject;
+        int cont = Random.Range(3, 6);
+
+        for (int i = 0; i < cont; i++)
+        {
+            int index = Random.Range(0, trashsToSpawn.Count - 1);
+
+            while (true)
+            {
                 if (!trashsToSpawn[index].gameObject.activeInHierarchy) // VERIFICA SE A CENA JA ESTA SENDO UTILIZADA
                 {
                     trashsToSpawn[index].gameObject.SetActive(true);
@@ -150,9 +189,6 @@ public class SceneController : MonoBehaviour
                 }
             }
         }
-
-        instancia = instancia2;
-        instancia2 = null;
     }
 
     public void ResetGenerator()
