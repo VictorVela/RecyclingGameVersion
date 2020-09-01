@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 5796195470055203758}
   - component: {fileID: 6948580484861564870}
   - component: {fileID: 6948580484861564873}
-  - component: {fileID: 6948580484861564877}
   m_Layer: 0
-  m_Name: lixo 1
+  m_Name: lixo_final6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,6 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+  fase5: 0
+  fase6: 1
+  fase7: 0
+  fase8: 0
   lata: {fileID: 21300000, guid: c9cae5f4e09695a4b9de499a56c15c78, type: 3}
   jornal: {fileID: 21300000, guid: 1f6f6c1f8bd0d154e82af14f310aa5ad, type: 3}
   plastico: {fileID: 0}
@@ -141,22 +144,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.52
---- !u!114 &6948580484861564877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5763919610156526332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de22dd6ffd76aae41be203442297bb6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 30
-  lata: {fileID: 21300000, guid: c9cae5f4e09695a4b9de499a56c15c78, type: 3}
-  jornal: {fileID: 21300000, guid: 1f6f6c1f8bd0d154e82af14f310aa5ad, type: 3}
-  plastico: {fileID: 0}
-  vidro: {fileID: 0}
-  organico: {fileID: 0}
-  entulho: {fileID: 0}

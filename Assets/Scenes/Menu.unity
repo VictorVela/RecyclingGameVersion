@@ -5906,6 +5906,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 939590061}
         m_MethodName: StartFase08
+        m_MethodName: StartFase05
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5916,6 +5917,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1945709992
+--- !u!114 &1860940625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6035,6 +6037,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 939590061}
         m_MethodName: Back
+        m_MethodName: StartFase08
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6045,6 +6048,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1985944105
+--- !u!114 &1905871758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
