@@ -2056,12 +2056,17 @@ PrefabInstance:
     - target: {fileID: 1953481566706415519, guid: 0df39eef4e9213e41af915157b621867,
         type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1953481566706415519, guid: 0df39eef4e9213e41af915157b621867,
         type: 3}
       propertyPath: m_GravityScale
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1953481566706415519, guid: 0df39eef4e9213e41af915157b621867,
+        type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0df39eef4e9213e41af915157b621867, type: 3}
