@@ -1,29 +1,39 @@
-﻿
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-
-public class Lixo_fabrica : MonoBehaviour
+public class Lixo_fabrica_countdown : MonoBehaviour
 {
-    public float speed = 30.0f;
-    private int nivel;
+    //PUBLIC
     public bool fase5 = false;
     public bool fase6 = false;
     public bool fase7 = false;
     public bool fase8 = false;
+    public float speed = 30.0f;
     public Sprite lata, jornal, plastico, vidro, organico, entulho;
+    
+    
+
+
+    //PRIVATE
+    private int nivel;
+    private int randomRange;
+    private int original;
     private SpriteRenderer rend;
     private Rigidbody2D rb;
-    private int randomRange;
     private bool normal = true;
     private bool firstP = false;
     private bool secondP = false;
     private bool seta01 = false;
     private bool destroy = false;
-    private bool chegaNaopode = true;
-    private int original;
 
+    //AUDIO
+    public static AudioClip coinsound;
+    static AudioSource audioSrc;
+
+    //CLASS LIXO
     public class UnicLixo
     {
         public Sprite resultadoLixo;
@@ -32,7 +42,9 @@ public class Lixo_fabrica : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
 
+        //Identificar fase
         if (fase8)
         {
             nivel = 7;
@@ -49,14 +61,9 @@ public class Lixo_fabrica : MonoBehaviour
         {
             nivel = 3;
         }
-        
-        
-        
 
-        Debug.Log("Seu nivel é: " + nivel);
-
+        //Randomizar lixo
         randomRange = Random.Range(0, nivel);
-
         rend = GetComponent<SpriteRenderer>();
 
         if (randomRange == 1)
@@ -101,10 +108,11 @@ public class Lixo_fabrica : MonoBehaviour
             entulho = Resources.Load<Sprite>("entulho");
             rend.sprite = entulho;
         }
-
     }
 
+   
 
+    //Verificar colisão
     private void OnTriggerExit2D(Collider2D collision)
     {
         UnicLixo unicLixoPlastico = new UnicLixo();
@@ -112,18 +120,20 @@ public class Lixo_fabrica : MonoBehaviour
 
         //TESTE COM PLASTICO
         if (collision.tag == "plastico_fab")
-         {
-             if (unicLixoPlastico.resultadoLixo == plastico)
-             {
-                 fab_score.scoreValue += 5;
-                 destroy = true;
+        {
+            if (unicLixoPlastico.resultadoLixo == plastico)
+            {
+                fab_score.scoreValue += 5;
+                fab_score.playSound();
+                destroy = true;
                 return;
-             }
-             else
-             {
-                 fab_score.GameOver();
-             }
-             destroy = true;
+            }
+            else
+            {
+                //fab_score.GameOver();
+                perderPonto();
+            }
+            destroy = true;
             return;
 
         }
@@ -134,11 +144,13 @@ public class Lixo_fabrica : MonoBehaviour
             if (rend.sprite == lata)
             {
                 fab_score.scoreValue += 5;
+                fab_score.playSound();
                 destroy = true;
             }
             else
             {
-                fab_score.GameOver();
+                //fab_score.GameOver();
+                perderPonto();
             }
             destroy = true;
         }
@@ -149,11 +161,13 @@ public class Lixo_fabrica : MonoBehaviour
             if (rend.sprite == jornal)
             {
                 fab_score.scoreValue += 5;
+                fab_score.playSound();
                 destroy = true;
             }
             else
             {
-                fab_score.GameOver();
+                //fab_score.GameOver();
+                perderPonto();
             }
             destroy = true;
         }
@@ -164,11 +178,13 @@ public class Lixo_fabrica : MonoBehaviour
             if (rend.sprite == vidro)
             {
                 fab_score.scoreValue += 5;
+                fab_score.playSound();
                 destroy = true;
             }
             else
             {
-                fab_score.GameOver();
+                //fab_score.GameOver();
+                perderPonto();
             }
             destroy = true;
         }
@@ -179,11 +195,13 @@ public class Lixo_fabrica : MonoBehaviour
             if (rend.sprite == organico)
             {
                 fab_score.scoreValue += 5;
+                fab_score.playSound();
                 destroy = true;
             }
             else
             {
-                fab_score.GameOver();
+                //fab_score.GameOver();
+                perderPonto();
             }
             destroy = true;
         }
@@ -194,18 +212,29 @@ public class Lixo_fabrica : MonoBehaviour
             if (rend.sprite == entulho)
             {
                 fab_score.scoreValue += 5;
+                fab_score.playSound();
                 destroy = true;
             }
             else
             {
-                fab_score.GameOver();
+                //fab_score.GameOver();
+                perderPonto();
             }
             destroy = true;
         }
 
     }
 
+    public void perderPonto()
+    {
+        fab_score.scoreValue -= 5;
+        if(fab_score.scoreValue < 0)
+        {
+            fab_score.scoreValue = 0;
+        }
+    }
 
+    //rotas de colisão e direcionamento 
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -231,6 +260,7 @@ public class Lixo_fabrica : MonoBehaviour
 
     }
 
+    //destruir lixo
     public void DestroyLixo()
     {
         Destroy(this.gameObject);
@@ -251,7 +281,6 @@ public class Lixo_fabrica : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (normal == true)
         {
             rb = this.GetComponent<Rigidbody2D>();
@@ -283,8 +312,4 @@ public class Lixo_fabrica : MonoBehaviour
             DestroyLixo();
         }
     }
-
-    
-
-    
 }

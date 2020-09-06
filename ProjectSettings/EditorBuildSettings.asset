@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Login_score/Final_Test.unity
+    guid: bd4afd06bca5ccd47ae657adabb89af9
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 230328e2f18a1814b8ec248313cb9d1c
   - enabled: 1
@@ -38,4 +41,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase10.unity
     guid: c2f6e60e37234c644b12db9ee2c48fe2
+    path: Assets/Scenes/Fase fabrica de reciclagem/scene/Fabrica_reciclagem_01.unity
+    guid: 32b55af51d3b1eb489035f953f2b6ae5
+  - enabled: 1
+    path: Assets/Scenes/Fase fabrica de reciclagem/scene/Fabrica_reciclagem_05.unity
+    guid: 7905c8860ea37784d8e83246946ba46d
   m_configObjects: {}
