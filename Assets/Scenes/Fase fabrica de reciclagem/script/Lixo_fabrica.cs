@@ -116,7 +116,8 @@ public class Lixo_fabrica : MonoBehaviour
              if (unicLixoPlastico.resultadoLixo == plastico)
              {
                  fab_score.scoreValue += 5;
-                 destroy = true;
+                
+                destroy = true;
                 return;
              }
              else
@@ -134,6 +135,7 @@ public class Lixo_fabrica : MonoBehaviour
             if (rend.sprite == lata)
             {
                 fab_score.scoreValue += 5;
+                
                 destroy = true;
             }
             else
@@ -149,6 +151,7 @@ public class Lixo_fabrica : MonoBehaviour
             if (rend.sprite == jornal)
             {
                 fab_score.scoreValue += 5;
+                
                 destroy = true;
             }
             else
@@ -164,6 +167,7 @@ public class Lixo_fabrica : MonoBehaviour
             if (rend.sprite == vidro)
             {
                 fab_score.scoreValue += 5;
+                
                 destroy = true;
             }
             else
@@ -179,6 +183,7 @@ public class Lixo_fabrica : MonoBehaviour
             if (rend.sprite == organico)
             {
                 fab_score.scoreValue += 5;
+                
                 destroy = true;
             }
             else
@@ -194,6 +199,7 @@ public class Lixo_fabrica : MonoBehaviour
             if (rend.sprite == entulho)
             {
                 fab_score.scoreValue += 5;
+                
                 destroy = true;
             }
             else

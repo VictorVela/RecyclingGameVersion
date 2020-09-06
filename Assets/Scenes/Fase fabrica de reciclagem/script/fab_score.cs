@@ -55,6 +55,7 @@ public class fab_score : MonoBehaviour
 
     public void Menu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
 
