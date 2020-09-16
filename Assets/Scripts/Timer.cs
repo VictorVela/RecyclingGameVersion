@@ -53,7 +53,10 @@ public class Timer : MonoBehaviour
         }
         if (!playerDead)
         {
-            timeStart -= Time.deltaTime;
+            if (PersonSelect.pause.Equals(false))
+            {
+                timeStart -= Time.deltaTime;
+            }            
 
             string minutes = ((int)timeStart / 60).ToString();
             string seconds = (timeStart % 60).ToString("0");

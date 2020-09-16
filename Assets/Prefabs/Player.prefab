@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3597505094412994611}
   - component: {fileID: 3597505094412994620}
   - component: {fileID: 3597505094412994608}
+  - component: {fileID: 3597505094412994614}
   - component: {fileID: 3597505094412994609}
   - component: {fileID: 3597505094412994615}
-  - component: {fileID: 3597505094412994614}
   m_Layer: 0
   m_Name: Player
   m_TagString: NoCollider
@@ -124,6 +124,22 @@ CapsuleCollider2D:
   m_Offset: {x: -0.123467684, y: 1.0454497}
   m_Size: {x: 0.8648658, y: 1.9992547}
   m_Direction: 0
+--- !u!58 &3597505094412994614
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3597505094412994621}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.088287294, y: 0.8305413}
+  serializedVersion: 2
+  m_Radius: 0.8292564
 --- !u!50 &3597505094412994609
 Rigidbody2D:
   serializedVersion: 4
@@ -180,7 +196,7 @@ MonoBehaviour:
   desableSceneP: {fileID: 0}
   startSceneP: {fileID: 0}
   trashCollectorPlayer: {fileID: 0}
-  colliderTrashTest: {fileID: 0}
+  colliderTrashTest: {fileID: 8735695797482795572}
   isGameRunning: 0
   points: 0
   bkpCamera: 0
@@ -192,22 +208,6 @@ MonoBehaviour:
   trashCollectorSceneXPosition: 0
   trashInRiver: 0
   inBoat: 0
---- !u!58 &3597505094412994614
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3597505094412994621}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.14935768, y: 0.83054125}
-  serializedVersion: 2
-  m_Radius: 0.8940686
 --- !u!1 &3597505094835823282
 GameObject:
   m_ObjectHideFlags: 0

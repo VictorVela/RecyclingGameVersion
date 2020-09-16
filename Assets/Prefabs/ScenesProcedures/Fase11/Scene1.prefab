@@ -2429,7 +2429,7 @@ PrefabInstance:
     - target: {fileID: 257212641097554266, guid: 21c291cba573afa4a98d48b3ff33f13d,
         type: 3}
       propertyPath: m_FlipX
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1428331222459092855, guid: 21c291cba573afa4a98d48b3ff33f13d,
         type: 3}

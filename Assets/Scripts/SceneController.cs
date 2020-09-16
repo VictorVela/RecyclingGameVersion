@@ -75,9 +75,13 @@ public class SceneController : MonoBehaviour
                     {
                         scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 31.81f, 0.48f, baseScene.transform.position.z);
                     }
-                    else if (baseScene.scene.name.Equals("Fase10") || baseScene.scene.name.Equals("Fase11"))
+                    else if (baseScene.scene.name.Equals("Fase01"))
                     {
-                        scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 29.10f, baseScene.transform.position.y, baseScene.transform.position.z);
+                        scenesToSpawn[index].transform.position = nextScenes.transform.position;
+                    }
+                    else if (!baseScene.scene.name.Equals("Fase01") || !baseScene.scene.name.Equals("Fase02"))
+                    {
+                        scenesToSpawn[index].transform.position = nextScenes.transform.position;
                     }
                     else
                     {

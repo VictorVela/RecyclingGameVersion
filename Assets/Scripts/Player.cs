@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private bool isMobile;
     public bool isGameRunning;
+    public bool canPause;
     public int points = 0;
     private Camera camera;
     public float bkpCamera= -8;
@@ -54,6 +55,7 @@ public class Player : MonoBehaviour
         inRiver = false;
         isMobile = MobileTest();
         inBoat = false;
+        canPause = false;
     }
 
     public void SetActive()
@@ -91,6 +93,22 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (PersonSelect.pause)
+        {
+            rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+            canPause = true;
+        }
+        else
+        {
+            rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+            if (canPause)
+            {
+                rigidbody2D.velocity = new Vector2(walkingSpeed, rigidbody2D.velocity.y + 0.1f);
+                canPause = false;
+            }
+                
+        }
+
         if (isGameRunning)
         {
             // JUMP TEST
@@ -104,7 +122,7 @@ public class Player : MonoBehaviour
                 animator.Play("Player_Jumping");
             }
 
-            if (Input.GetKey("space") && isGrounded)
+            if (Input.GetKey("space") && isGrounded || Input.GetKey("x") && isGrounded)
             {
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpSpeed);
 
@@ -126,6 +144,7 @@ public class Player : MonoBehaviour
                     rigidbody2D.velocity = (new Vector2(walkingSpeed, rigidbody2D.velocity.y));
                     if (isGrounded)
                         animator.Play("Player_Walking");
+                    if(!PersonSelect.pause)
                     spriteRenderer.flipX = false;
                 }
                 else if (joystick.Horizontal > 0.4f)
@@ -133,21 +152,24 @@ public class Player : MonoBehaviour
                     rigidbody2D.velocity = (new Vector2(runSpeed, rigidbody2D.velocity.y));
                     if (isGrounded)
                         animator.Play("Player_Running");
-                    spriteRenderer.flipX = false;
+                    if (!PersonSelect.pause)
+                        spriteRenderer.flipX = false;
                 }
                 else if (joystick.Horizontal < 0f && joystick.Horizontal > -0.4f)
                 {
                     rigidbody2D.velocity = (new Vector2(-walkingSpeed, rigidbody2D.velocity.y));
                     if (isGrounded)
                         animator.Play("Player_Walking");
-                    spriteRenderer.flipX = true;
+                    if (!PersonSelect.pause)
+                        spriteRenderer.flipX = true;
                 }
                 else if (joystick.Horizontal < -0.4f && joystick.Horizontal != 0)
                 {
                     rigidbody2D.velocity = (new Vector2(-runSpeed, rigidbody2D.velocity.y));
                     if (isGrounded)
                         animator.Play("Player_Running");
-                    spriteRenderer.flipX = true;
+                    if (!PersonSelect.pause)
+                        spriteRenderer.flipX = true;
                 }
                 else
                 {
@@ -162,43 +184,47 @@ public class Player : MonoBehaviour
             if (isGameRunning)
             {
                 // WALKING TEST L AND R 
-                if (Input.GetKey("d") && !Input.GetKey(KeyCode.LeftControl) || Input.GetKey("right") && !Input.GetKey(KeyCode.LeftControl))
+                if (   Input.GetKey("d") && !Input.GetKey(KeyCode.LeftControl) || Input.GetKey("right") && !Input.GetKey("z"))
                 {
                     rigidbody2D.velocity = new Vector2(walkingSpeed, rigidbody2D.velocity.y);
                     if (isGrounded)
                         animator.Play("Player_Walking");
-                    spriteRenderer.flipX = false;
+                    if (!PersonSelect.pause)
+                        spriteRenderer.flipX = false;
                     if (transform.position.x > bkpCamera)
                         bkpCamera = transform.position.x;
 
                 }
-                else if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey("d") || Input.GetKey(KeyCode.LeftControl) && Input.GetKey("right")) // CORRIDA
+                else if (  Input.GetKey(KeyCode.LeftControl) && Input.GetKey("d") || Input.GetKey("z") && Input.GetKey("right")) // CORRIDA
                 {
                     if (isGrounded)
                     {
                         rigidbody2D.velocity = new Vector2(runSpeed, rigidbody2D.velocity.y);
                         animator.Play("Player_Running");
-                        spriteRenderer.flipX = false;
+                        if (!PersonSelect.pause)
+                            spriteRenderer.flipX = false;
                         if(transform.position.x > bkpCamera)
                         bkpCamera = transform.position.x;
                     }
                 }
-                else if (Input.GetKey("a") && !Input.GetKey(KeyCode.LeftControl) || Input.GetKey("left") && !Input.GetKey(KeyCode.LeftControl))
+                else if (Input.GetKey("a") && !Input.GetKey(KeyCode.LeftControl) || Input.GetKey("left") && !Input.GetKey("z"))
                 {
                     rigidbody2D.velocity = new Vector2(-walkingSpeed, rigidbody2D.velocity.y);
                     
                     if (isGrounded)
                         animator.Play("Player_Walking");
-                    spriteRenderer.flipX = true;
+                    if (!PersonSelect.pause)
+                        spriteRenderer.flipX = true;
 
                 }
-                else if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey("a") || Input.GetKey(KeyCode.LeftControl) && Input.GetKey("left")) // CORRIDA
+                else if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey("a") || Input.GetKey("z") && Input.GetKey("left")) // CORRIDA
                 {
                     if (isGrounded)
                     {
                         rigidbody2D.velocity = new Vector2(-runSpeed, rigidbody2D.velocity.y);
                         animator.Play("Player_Running");
-                        spriteRenderer.flipX = true;
+                        if (!PersonSelect.pause)
+                            spriteRenderer.flipX = true;
                     }
                 }
                 else
@@ -230,7 +256,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // ELIMINACAO DO LIXO
-        if (collision.gameObject.tag.Equals("Trash") && Input.GetMouseButton(0))
+        if (collision.gameObject.tag.Equals("Trash") && Input.GetMouseButton(0) || collision.gameObject.tag.Equals("Trash") && Input.GetKey("c"))
         {
             if (collision.gameObject.layer.Equals(13))
             {

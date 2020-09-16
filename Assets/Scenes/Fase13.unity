@@ -1343,17 +1343,17 @@ PrefabInstance:
     - target: {fileID: 3597505094412994614, guid: 756f6eff23f49a14880c9e51b5bb6d59,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.112639025
+      value: -0.088287294
       objectReference: {fileID: 0}
     - target: {fileID: 3597505094412994614, guid: 756f6eff23f49a14880c9e51b5bb6d59,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.70343894
+      value: 0.8305413
       objectReference: {fileID: 0}
     - target: {fileID: 3597505094412994614, guid: 756f6eff23f49a14880c9e51b5bb6d59,
         type: 3}
       propertyPath: m_Radius
-      value: 0.8036849
+      value: 0.8292564
       objectReference: {fileID: 0}
     - target: {fileID: 3597505094412994615, guid: 756f6eff23f49a14880c9e51b5bb6d59,
         type: 3}
@@ -2390,13 +2390,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716aec5731b065c47a227ec00134bfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 3
+  offsetX: 1
   offsetY: 2
   smooth: 0.1
-  limitedUp: 2
+  limitedUp: 0
   limitedDown: 0
   limitedLeft: -8
-  limitedRight: 100
+  limitedRight: 100000
   playerObj: {fileID: 0}
   boy: {fileID: 611776284}
   girl: {fileID: 1714089417}

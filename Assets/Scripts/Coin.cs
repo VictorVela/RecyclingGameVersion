@@ -46,7 +46,7 @@ public class Coin : MonoBehaviour {
 			flyToCat = false;
         }
 
-		if (flyToCat && Input.GetMouseButton(0))
+		if (flyToCat && Input.GetMouseButton(0) || flyToCat && Input.GetKey("c"))
 		{
 			catDirection = - (transform.position - player.gameObject.GetComponent<Player>().colliderTrashTest.transform.position).normalized;
 			rb.velocity = new Vector2 (catDirection.x, catDirection.y) * 48f * (Time.time / timeStamp);
@@ -58,7 +58,10 @@ public class Coin : MonoBehaviour {
 		{
 			if (Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Player") 
 				|| Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Boy") 
-				|| Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Girl"))
+				|| Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Girl")
+				|| Input.GetKey("c") && targetCollider.gameObject.name.Equals("Player") 
+				|| Input.GetKey("c") && targetCollider.gameObject.name.Equals("Boy") 
+				|| Input.GetKey("c") && targetCollider.gameObject.name.Equals("Girl"))
 			{
 				targetCollider.gameObject.GetComponent<Player>().points += 1;
 
