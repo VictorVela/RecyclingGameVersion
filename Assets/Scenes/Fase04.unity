@@ -2226,7 +2226,7 @@ MonoBehaviour:
   limitedUp: 0
   limitedDown: 0
   limitedLeft: -9
-  limitedRight: 10000
+  limitedRight: 100000
   playerObj: {fileID: 0}
   boy: {fileID: 1437140427}
   girl: {fileID: 1768795641}

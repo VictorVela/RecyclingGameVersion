@@ -4541,12 +4541,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetX: 1
-  offsetY: 2.27
+  offsetY: 2
   smooth: 0.1
   limitedUp: 0
   limitedDown: 0
   limitedLeft: -8
-  limitedRight: 10000
+  limitedRight: 100000
   playerObj: {fileID: 0}
   boy: {fileID: 1991975749}
   girl: {fileID: 15647034}
@@ -4712,6 +4712,11 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 1018882360}
+    - target: {fileID: 683727368704851416, guid: 02b9ad99d2e18ad48bb340ca6f50680b,
+        type: 3}
+      propertyPath: levelWithoutTime
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b9ad99d2e18ad48bb340ca6f50680b, type: 3}
 --- !u!1 &2086313353

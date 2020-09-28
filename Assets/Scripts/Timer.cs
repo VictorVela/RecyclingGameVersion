@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour
     private bool finished = false;
     public bool playerDead = false;
     public bool gameFinished = false;
+    public bool levelWithoutTime = false;
     
     public TextMeshProUGUI timer;
     public GameController gameController;
@@ -55,7 +56,8 @@ public class Timer : MonoBehaviour
         {
             if (PersonSelect.pause.Equals(false))
             {
-                timeStart -= Time.deltaTime;
+                if (!levelWithoutTime)
+                    timeStart -= Time.deltaTime;
             }            
 
             string minutes = ((int)timeStart / 60).ToString();
