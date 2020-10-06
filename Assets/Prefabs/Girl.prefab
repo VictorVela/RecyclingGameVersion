@@ -199,6 +199,7 @@ MonoBehaviour:
   trashCollectorPlayer: {fileID: 0}
   colliderTrashTest: {fileID: 1953481567853054095}
   isGameRunning: 0
+  canPause: 0
   points: 0
   bkpCamera: 0
   walkingSpeed: 4
@@ -209,6 +210,13 @@ MonoBehaviour:
   trashCollectorSceneXPosition: 16
   trashInRiver: 0
   inBoat: 0
+  layerObjetosIma:
+    serializedVersion: 2
+    m_Bits: 2
+  forcaFixa: 0
+  coeficienteDeAproximacao: 1.5
+  forcaIma: 0.2
+  maximaDistancia: 4
 --- !u!82 &1953481566706415506
 AudioSource:
   m_ObjectHideFlags: 0
@@ -221,7 +229,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d0c04a9df0a4cba4fba62499b0fc13ab, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -42,6 +42,21 @@ public class Player : MonoBehaviour
     private bool inRiver;
     public bool inBoat;
 
+
+    //------------------------------------------------
+
+    public LayerMask layerObjetosIma = 2;
+    public bool forcaFixa = false;
+    public float coeficienteDeAproximacao = 1.5f;
+    public float forcaIma = 0.02f;
+    public float maximaDistancia = 4;
+
+    float distanciaDoObjeto = 0;
+    float distanciaSQRT = 0;
+    float distanciaSQRT_force = 0;
+
+    //-------------------------------------------------
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,7 +85,15 @@ public class Player : MonoBehaviour
     {
         if (!inRiver)
         {
-            suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y);
+            if (GetComponent<SpriteRenderer>().flipX.Equals(false))
+            {
+                suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y);
+            }
+            else
+            {
+                suckerTrash.transform.position = new Vector2(transform.position.x -3, transform.position.y);
+            }
+            
         }
         else
         {
@@ -89,28 +112,61 @@ public class Player : MonoBehaviour
         // OBJETOS PARA TRATAMENTO DE CENA SEGUIREM O PLAYER
         
         PointScreen.pointPlayer = points;
+
+        //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        
+            Collider2D[] objetosNoRaioDeAlcance = Physics2D.OverlapCircleAll(transform.position, maximaDistancia, layerObjetosIma);
+            foreach (Collider2D targetCollider in objetosNoRaioDeAlcance)
+            {
+                Transform alvoDoIma = targetCollider.transform;
+                Rigidbody2D rbTemp = alvoDoIma.GetComponent<Rigidbody2D>();
+                if (rbTemp && Input.GetMouseButton(0) || rbTemp && Input.GetKey("c"))
+                {
+                    Vector3 direcaoDoObjeto = (colliderTrashTest.transform.position - alvoDoIma.position).normalized;
+                    if (forcaFixa)
+                    {
+                        distanciaSQRT = (coeficienteDeAproximacao * coeficienteDeAproximacao);
+                    }
+                    else
+                    {
+                        distanciaDoObjeto = Vector3.Distance(transform.position, alvoDoIma.position);
+                        distanciaSQRT = Mathf.Pow(distanciaDoObjeto, coeficienteDeAproximacao);
+                    }
+
+                    distanciaSQRT_force = (forcaIma / distanciaSQRT) * 100.0f;
+                    distanciaSQRT_force = Mathf.Clamp(distanciaSQRT_force, 0.01f, 10000000.0f);
+
+                    rbTemp.AddForce(direcaoDoObjeto * distanciaSQRT_force);
+
+                    Debug.DrawLine(transform.position, alvoDoIma.position, Color.red);
+                }
+            }
+        
+        
+        //------------------------------------------------------------------------------------------------------------------------------------------------------------------
     }
 
     private void FixedUpdate()
     {
-        if (PersonSelect.pause)
-        {
+        if(!isGameRunning)
             rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
-            canPause = true;
-        }
-        else
-        {
-            rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
-            if (canPause)
-            {
-                rigidbody2D.velocity = new Vector2(walkingSpeed, rigidbody2D.velocity.y + 0.1f);
-                canPause = false;
-            }
-                
-        }
 
         if (isGameRunning)
         {
+            if (PersonSelect.pause)
+            {
+                rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+                canPause = true;
+            }
+            else
+            {
+                rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+                if (canPause)
+                {
+                    rigidbody2D.velocity = new Vector2(walkingSpeed, rigidbody2D.velocity.y + 0.1f);
+                    canPause = false;
+                }
+            }
             // JUMP TEST
             if (Physics2D.Linecast(transform.position, groundCheck.position, -1 << LayerMask.NameToLayer("Ground")))
             {

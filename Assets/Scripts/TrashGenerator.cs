@@ -69,7 +69,7 @@ public class TrashGenerator : MonoBehaviour
                 {
                     objectsToSpawn[index].gameObject.SetActive(true);
                     objectsToSpawn[index].transform.position = transform.position;
-                    objectsToSpawn[index].transform.localScale = new Vector3(0.3f, 0.3f, 0.4f);
+                    objectsToSpawn[index].transform.localScale = new Vector3(0.25f, 0.25f, 0.4f);
                     objectsToSpawn[index].transform.position = new Vector2(objectsToSpawn[index].transform.position.x, objectsToSpawn[index].transform.position.y + i * 1);
                     break;
                 }

@@ -10,6 +10,7 @@ public class Pause : MonoBehaviour
     public void LevelsScreen()
     {
         SceneManager.LoadScene("Menu");
+        PersonSelect.pause = false;
         pause.gameObject.SetActive(false);
     }
 

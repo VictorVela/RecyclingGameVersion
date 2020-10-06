@@ -41,10 +41,10 @@ public class Coin : MonoBehaviour {
 		//if(gameObject.scene.name.Equals("Fase02"))
 		player = FindObjectOfType<Player>().gameObject;
 
-		if (player.transform.position.x > gameObject.transform.position.x && player.GetComponent<SpriteRenderer>().flipX.Equals(false))
+		/*if (player.transform.position.x > gameObject.transform.position.x && player.GetComponent<SpriteRenderer>().flipX.Equals(false))
         {
 			flyToCat = false;
-        }
+        }*/
 
 		if (flyToCat && Input.GetMouseButton(0) || flyToCat && Input.GetKey("c"))
 		{
@@ -53,10 +53,10 @@ public class Coin : MonoBehaviour {
 			
 		}
 
-		Collider2D[] objetosNoRaioDeAlcance = Physics2D.OverlapCircleAll(transform.position, 0.06f, 1);
+		/*Collider2D[] objetosNoRaioDeAlcance = Physics2D.OverlapCircleAll(transform.position, 0.06f, 1);
 		foreach (Collider2D targetCollider in objetosNoRaioDeAlcance)
 		{
-			if (Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Player") 
+			if	(  Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Player") 
 				|| Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Boy") 
 				|| Input.GetMouseButton(0) && targetCollider.gameObject.name.Equals("Girl")
 				|| Input.GetKey("c") && targetCollider.gameObject.name.Equals("Player") 
@@ -69,7 +69,7 @@ public class Coin : MonoBehaviour {
 				flyToCat = false;
 				player.GetComponent<AudioSource>().Play();
 			}
-		}
+		}*/
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
@@ -84,6 +84,14 @@ public class Coin : MonoBehaviour {
 			flyToCat = false;
         }
 		
+	}
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+		if (collision.gameObject.name.Equals("SuckerTrash") || collision.gameObject.name.Equals("SuckerTrashByGirl"))
+		{
+			flyToCat = true;
+		}
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)

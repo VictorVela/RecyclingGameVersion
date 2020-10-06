@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
 
     public void GameOver()
     {
-        print(player.gameObject.scene.name + " sementes: " + player.points);
+        //print(player.gameObject.scene.name + " sementes: " + player.points);
         gameOver.Show();
         player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         timer.playerDead = true;

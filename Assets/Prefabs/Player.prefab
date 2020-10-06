@@ -198,6 +198,7 @@ MonoBehaviour:
   trashCollectorPlayer: {fileID: 0}
   colliderTrashTest: {fileID: 8735695797482795572}
   isGameRunning: 0
+  canPause: 0
   points: 0
   bkpCamera: 0
   walkingSpeed: 4
@@ -208,6 +209,13 @@ MonoBehaviour:
   trashCollectorSceneXPosition: 0
   trashInRiver: 0
   inBoat: 0
+  layerObjetosIma:
+    serializedVersion: 2
+    m_Bits: 2
+  forcaFixa: 0
+  coeficienteDeAproximacao: 1.5
+  forcaIma: 0.2
+  maximaDistancia: 4
 --- !u!1 &3597505094835823282
 GameObject:
   m_ObjectHideFlags: 0

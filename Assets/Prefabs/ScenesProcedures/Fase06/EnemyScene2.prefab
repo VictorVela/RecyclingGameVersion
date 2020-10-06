@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929249103505018483}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.06, y: 1.59, z: -54.859863}
-  m_LocalScale: {x: 5.09224, y: 0.29999998, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.023366548, w: 0.999727}
+  m_LocalPosition: {x: -1.782, y: 1.533, z: -54.859863}
+  m_LocalScale: {x: 4.392057, y: 0.29999998, z: 1}
   m_Children: []
   m_Father: {fileID: 1809209229114711333}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.6780002}
 --- !u!61 &4368237599763529413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -73,7 +73,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 160
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -1410,7 +1410,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 160
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -1439,13 +1439,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5523384701840287522}
-  m_LocalRotation: {x: -0, y: -0, z: 0.32180372, w: 0.9468065}
-  m_LocalPosition: {x: -5.3130007, y: 0.75800025, z: -54.859863}
+  m_LocalRotation: {x: -0, y: -0, z: 0.27848786, w: 0.96043974}
+  m_LocalPosition: {x: -5.08, y: 0.68, z: -54.859863}
   m_LocalScale: {x: 2.9060802, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 1809209229114711333}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 37.544003}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 32.34}
 --- !u!61 &3841192227885284102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1487,7 +1487,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 160
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
