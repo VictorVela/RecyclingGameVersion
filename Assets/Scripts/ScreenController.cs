@@ -217,10 +217,31 @@ public class ScreenController : MonoBehaviour
         test.gameObject.SetActive(false);
     }
 
-    public void StartFaseEsteira()
+    public void StartFaseEsteira5()
     {
         screen2.GetComponent<Animator>().Play("FadeOut2");
         levelName = "Fabrica_reciclagem_05";
+        SceneManager.LoadScene(levelName);
+        test.gameObject.SetActive(false);
+    }
+    public void StartFaseEsteira6()
+    {
+        screen2.GetComponent<Animator>().Play("FadeOut2");
+        levelName = "Fabrica_reciclagem_06";
+        SceneManager.LoadScene(levelName);
+        test.gameObject.SetActive(false);
+    }
+    public void StartFaseEsteira7()
+    {
+        screen2.GetComponent<Animator>().Play("FadeOut2");
+        levelName = "Fabrica_reciclagem_07";
+        SceneManager.LoadScene(levelName);
+        test.gameObject.SetActive(false);
+    }
+    public void StartFaseEsteira8()
+    {
+        screen2.GetComponent<Animator>().Play("FadeOut2");
+        levelName = "Fabrica_reciclagem_08";
         SceneManager.LoadScene(levelName);
         test.gameObject.SetActive(false);
     }
