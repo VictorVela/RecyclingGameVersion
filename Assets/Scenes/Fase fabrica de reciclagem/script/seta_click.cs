@@ -20,7 +20,26 @@ public class seta_click : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(gameObject.name.Equals("Seta01") && Input.GetKeyDown("a"))
+        {
+            MudarSeta();
+        }
+        if(gameObject.name.Equals("Seta02") && Input.GetKeyDown("s"))
+        {
+            MudarSeta();
+        }
+        if(gameObject.name.Equals("Seta03") && Input.GetKeyDown("d"))
+        {
+            MudarSeta();
+        }
+        if(gameObject.name.Equals("Seta04") && Input.GetKeyDown("f"))
+        {
+            MudarSeta();
+        }
+        if(gameObject.name.Equals("Seta05") && Input.GetKeyDown("g"))
+        {
+            MudarSeta();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)

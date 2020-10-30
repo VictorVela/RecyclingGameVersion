@@ -75,8 +75,13 @@ public class SceneController : MonoBehaviour
                     {
                         scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 31.81f, 0.48f, baseScene.transform.position.z);
                     }
-                    else if (baseScene.scene.name.Equals("Fase10"))
+                    else if (baseScene.scene.name.Equals("Fase01"))
                     {
+                        scenesToSpawn[index].transform.position = nextScenes.transform.position;
+                    }
+                    else if (!baseScene.scene.name.Equals("Fase01") || !baseScene.scene.name.Equals("Fase02"))
+                    {
+                        //scenesToSpawn[index].transform.position = nextScenes.transform.position;
                         scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 29.10f, baseScene.transform.position.y, baseScene.transform.position.z);
                     }
                     else
@@ -148,7 +153,7 @@ public class SceneController : MonoBehaviour
                 {
                     trashsToSpawn[index].gameObject.SetActive(true);
                     trashsToSpawn[index].transform.position = transform.position;
-                    trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x + (i/2), positionTrash.transform.position.y + i * 2);
+                    trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x + (i /4), positionTrash.transform.position.y + i * 2);
                     break;
                 }
                 else
@@ -180,7 +185,7 @@ public class SceneController : MonoBehaviour
                 {
                     trashsToSpawn[index].gameObject.SetActive(true);
                     trashsToSpawn[index].transform.position = transform.position;
-                    trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x, positionTrash.transform.position.y + i * 2);
+                    trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x + (i / 4), positionTrash.transform.position.y + i * 2);
                     break;
                 }
                 else

@@ -12,26 +12,29 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 230328e2f18a1814b8ec248313cb9d1c
   - enabled: 1
+    path: Assets/Scenes/Points.unity
+    guid: 275ea6b0577a81846bdc2d7f4a88efa8
+  - enabled: 1
     path: Assets/Scenes/Fase01.unity
     guid: 25dc5a44fa9d57d49811b9185367ff1f
+  - enabled: 1
+    path: Assets/Scenes/Fase02.unity
+    guid: fcc4649411b21f5418ba78132377c562
   - enabled: 1
     path: Assets/Scenes/Fase03.unity
     guid: a5b0cad6051acf548af8cdc54905c55b
   - enabled: 1
-    path: Assets/Scenes/Fase06.unity
-    guid: 7229157955b89c5418c86e38993158d0
-  - enabled: 1
     path: Assets/Scenes/Fase04.unity
     guid: a691d32f343c3654babb2ab427a59665
   - enabled: 1
+    path: Assets/Scenes/Fase05.unity
+    guid: c83cf98bc78c3d84f82c13525ae7495f
+  - enabled: 1
+    path: Assets/Scenes/Fase06.unity
+    guid: 7229157955b89c5418c86e38993158d0
+  - enabled: 1
     path: Assets/Scenes/Fase07.unity
     guid: 059013d9050b66448a6a45de0f7a901a
-  - enabled: 1
-    path: Assets/Scenes/Points.unity
-    guid: 275ea6b0577a81846bdc2d7f4a88efa8
-  - enabled: 1
-    path: Assets/Scenes/Fase02.unity
-    guid: fcc4649411b21f5418ba78132377c562
   - enabled: 1
     path: Assets/Scenes/Fase08.unity
     guid: 1f7f65db2f69dd544b8c05ee53d1efa8
@@ -41,9 +44,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase10.unity
     guid: c2f6e60e37234c644b12db9ee2c48fe2
-    path: Assets/Scenes/Fase fabrica de reciclagem/scene/Fabrica_reciclagem_01.unity
-    guid: 32b55af51d3b1eb489035f953f2b6ae5
+  - enabled: 1
+    path: Assets/Scenes/Fase11.unity
+    guid: ea027147088319e4495afd8379d8552e
+  - enabled: 1
+    path: Assets/Scenes/Fase12.unity
+    guid: 92d7efad30a62b54f9e467075f8a327a
+  - enabled: 1
+    path: Assets/Scenes/Fase13.unity
+    guid: cd1da7644a3bf0a4d89ce350783236b5
+  - enabled: 1
+    path: Assets/Scenes/Fase14.unity
+    guid: 973c196cd1a616941b9afdc411b441cf
+  - enabled: 1
+    path: Assets/Scenes/Fase15.unity
+    guid: 5101b2be658b1254ea2bb582e3fb568c
   - enabled: 1
     path: Assets/Scenes/Fase fabrica de reciclagem/scene/Fabrica_reciclagem_05.unity
     guid: 7905c8860ea37784d8e83246946ba46d
+  - enabled: 1
+    path: Assets/Scenes/Fase fabrica de reciclagem/scene/Fabrica_reciclagem_06.unity
+    guid: abbbad8aea1c57f4f875b25164202e8d
+  - enabled: 1
+    path: Assets/Scenes/Fase fabrica de reciclagem/scene/Fabrica_reciclagem_07.unity
+    guid: 0ff2e5c0c76984840897e975b576e975
+  - enabled: 1
+    path: Assets/Scenes/Fase fabrica de reciclagem/scene/Fabrica_reciclagem_08.unity
+    guid: fcf2747486c7f854dba08ae4a657617c
   m_configObjects: {}

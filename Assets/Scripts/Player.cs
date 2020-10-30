@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private bool isMobile;
     public bool isGameRunning;
+    public bool canPause;
     public int points = 0;
     private Camera camera;
     public float bkpCamera= -8;
@@ -41,6 +42,21 @@ public class Player : MonoBehaviour
     private bool inRiver;
     public bool inBoat;
 
+
+    //------------------------------------------------
+
+    public LayerMask layerObjetosIma = 2;
+    public bool forcaFixa = false;
+    public float coeficienteDeAproximacao = 1.5f;
+    public float forcaIma = 0.02f;
+    public float maximaDistancia = 4;
+
+    float distanciaDoObjeto = 0;
+    float distanciaSQRT = 0;
+    float distanciaSQRT_force = 0;
+
+    //-------------------------------------------------
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +70,7 @@ public class Player : MonoBehaviour
         inRiver = false;
         isMobile = MobileTest();
         inBoat = false;
+        canPause = false;
     }
 
     public void SetActive()
@@ -68,7 +85,15 @@ public class Player : MonoBehaviour
     {
         if (!inRiver)
         {
-            suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y);
+            if (GetComponent<SpriteRenderer>().flipX.Equals(false))
+            {
+                suckerTrash.transform.position = new Vector2(transform.position.x, transform.position.y);
+            }
+            else
+            {
+                suckerTrash.transform.position = new Vector2(transform.position.x -3, transform.position.y);
+            }
+            
         }
         else
         {
@@ -87,12 +112,61 @@ public class Player : MonoBehaviour
         // OBJETOS PARA TRATAMENTO DE CENA SEGUIREM O PLAYER
         
         PointScreen.pointPlayer = points;
+
+        //------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        
+            Collider2D[] objetosNoRaioDeAlcance = Physics2D.OverlapCircleAll(transform.position, maximaDistancia, layerObjetosIma);
+            foreach (Collider2D targetCollider in objetosNoRaioDeAlcance)
+            {
+                Transform alvoDoIma = targetCollider.transform;
+                Rigidbody2D rbTemp = alvoDoIma.GetComponent<Rigidbody2D>();
+                if (rbTemp && Input.GetMouseButton(0) || rbTemp && Input.GetKey("c"))
+                {
+                    Vector3 direcaoDoObjeto = (colliderTrashTest.transform.position - alvoDoIma.position).normalized;
+                    if (forcaFixa)
+                    {
+                        distanciaSQRT = (coeficienteDeAproximacao * coeficienteDeAproximacao);
+                    }
+                    else
+                    {
+                        distanciaDoObjeto = Vector3.Distance(transform.position, alvoDoIma.position);
+                        distanciaSQRT = Mathf.Pow(distanciaDoObjeto, coeficienteDeAproximacao);
+                    }
+
+                    distanciaSQRT_force = (forcaIma / distanciaSQRT) * 100.0f;
+                    distanciaSQRT_force = Mathf.Clamp(distanciaSQRT_force, 0.01f, 10000000.0f);
+
+                    rbTemp.AddForce(direcaoDoObjeto * distanciaSQRT_force);
+
+                    Debug.DrawLine(transform.position, alvoDoIma.position, Color.red);
+                }
+            }
+        
+        
+        //------------------------------------------------------------------------------------------------------------------------------------------------------------------
     }
 
     private void FixedUpdate()
     {
+        if(!isGameRunning)
+            rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+
         if (isGameRunning)
         {
+            if (PersonSelect.pause)
+            {
+                rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+                canPause = true;
+            }
+            else
+            {
+                rigidbody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
+                if (canPause)
+                {
+                    rigidbody2D.velocity = new Vector2(walkingSpeed, rigidbody2D.velocity.y + 0.1f);
+                    canPause = false;
+                }
+            }
             // JUMP TEST
             if (Physics2D.Linecast(transform.position, groundCheck.position, -1 << LayerMask.NameToLayer("Ground")))
             {
@@ -104,7 +178,7 @@ public class Player : MonoBehaviour
                 animator.Play("Player_Jumping");
             }
 
-            if (Input.GetKey("space") && isGrounded)
+            if (Input.GetKey("space") && isGrounded || Input.GetKey("x") && isGrounded)
             {
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpSpeed);
 
@@ -126,6 +200,7 @@ public class Player : MonoBehaviour
                     rigidbody2D.velocity = (new Vector2(walkingSpeed, rigidbody2D.velocity.y));
                     if (isGrounded)
                         animator.Play("Player_Walking");
+                    if(!PersonSelect.pause)
                     spriteRenderer.flipX = false;
                 }
                 else if (joystick.Horizontal > 0.4f)
@@ -133,21 +208,24 @@ public class Player : MonoBehaviour
                     rigidbody2D.velocity = (new Vector2(runSpeed, rigidbody2D.velocity.y));
                     if (isGrounded)
                         animator.Play("Player_Running");
-                    spriteRenderer.flipX = false;
+                    if (!PersonSelect.pause)
+                        spriteRenderer.flipX = false;
                 }
                 else if (joystick.Horizontal < 0f && joystick.Horizontal > -0.4f)
                 {
                     rigidbody2D.velocity = (new Vector2(-walkingSpeed, rigidbody2D.velocity.y));
                     if (isGrounded)
                         animator.Play("Player_Walking");
-                    spriteRenderer.flipX = true;
+                    if (!PersonSelect.pause)
+                        spriteRenderer.flipX = true;
                 }
                 else if (joystick.Horizontal < -0.4f && joystick.Horizontal != 0)
                 {
                     rigidbody2D.velocity = (new Vector2(-runSpeed, rigidbody2D.velocity.y));
                     if (isGrounded)
                         animator.Play("Player_Running");
-                    spriteRenderer.flipX = true;
+                    if (!PersonSelect.pause)
+                        spriteRenderer.flipX = true;
                 }
                 else
                 {
@@ -162,43 +240,47 @@ public class Player : MonoBehaviour
             if (isGameRunning)
             {
                 // WALKING TEST L AND R 
-                if (Input.GetKey("d") && !Input.GetKey(KeyCode.LeftControl) || Input.GetKey("right") && !Input.GetKey(KeyCode.LeftControl))
+                if (   Input.GetKey("d") && !Input.GetKey(KeyCode.LeftControl) || Input.GetKey("right") && !Input.GetKey("z"))
                 {
                     rigidbody2D.velocity = new Vector2(walkingSpeed, rigidbody2D.velocity.y);
                     if (isGrounded)
                         animator.Play("Player_Walking");
-                    spriteRenderer.flipX = false;
+                    if (!PersonSelect.pause)
+                        spriteRenderer.flipX = false;
                     if (transform.position.x > bkpCamera)
                         bkpCamera = transform.position.x;
 
                 }
-                else if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey("d") || Input.GetKey(KeyCode.LeftControl) && Input.GetKey("right")) // CORRIDA
+                else if (  Input.GetKey(KeyCode.LeftControl) && Input.GetKey("d") || Input.GetKey("z") && Input.GetKey("right")) // CORRIDA
                 {
                     if (isGrounded)
                     {
                         rigidbody2D.velocity = new Vector2(runSpeed, rigidbody2D.velocity.y);
                         animator.Play("Player_Running");
-                        spriteRenderer.flipX = false;
+                        if (!PersonSelect.pause)
+                            spriteRenderer.flipX = false;
                         if(transform.position.x > bkpCamera)
                         bkpCamera = transform.position.x;
                     }
                 }
-                else if (Input.GetKey("a") && !Input.GetKey(KeyCode.LeftControl) || Input.GetKey("left") && !Input.GetKey(KeyCode.LeftControl))
+                else if (Input.GetKey("a") && !Input.GetKey(KeyCode.LeftControl) || Input.GetKey("left") && !Input.GetKey("z"))
                 {
                     rigidbody2D.velocity = new Vector2(-walkingSpeed, rigidbody2D.velocity.y);
                     
                     if (isGrounded)
                         animator.Play("Player_Walking");
-                    spriteRenderer.flipX = true;
+                    if (!PersonSelect.pause)
+                        spriteRenderer.flipX = true;
 
                 }
-                else if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey("a") || Input.GetKey(KeyCode.LeftControl) && Input.GetKey("left")) // CORRIDA
+                else if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey("a") || Input.GetKey("z") && Input.GetKey("left")) // CORRIDA
                 {
                     if (isGrounded)
                     {
                         rigidbody2D.velocity = new Vector2(-runSpeed, rigidbody2D.velocity.y);
                         animator.Play("Player_Running");
-                        spriteRenderer.flipX = true;
+                        if (!PersonSelect.pause)
+                            spriteRenderer.flipX = true;
                     }
                 }
                 else
@@ -230,7 +312,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // ELIMINACAO DO LIXO
-        if (collision.gameObject.tag.Equals("Trash") && Input.GetMouseButton(0))
+        if (collision.gameObject.tag.Equals("Trash") && Input.GetMouseButton(0) || collision.gameObject.tag.Equals("Trash") && Input.GetKey("c"))
         {
             if (collision.gameObject.layer.Equals(13))
             {

@@ -17,11 +17,15 @@ public class EnemyHorizontal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(move, GetComponent<Rigidbody2D>().velocity.y);
-        if (colidde)
+        if (!PersonSelect.pause)
         {
-            Flip();
+            GetComponent<Rigidbody2D>().velocity = new Vector2(move, GetComponent<Rigidbody2D>().velocity.y);
+            if (colidde)
+            {
+                Flip();
+            }
         }
+        
     }
 
     private void Flip()
