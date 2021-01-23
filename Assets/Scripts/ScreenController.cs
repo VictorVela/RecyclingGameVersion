@@ -56,7 +56,7 @@ public class ScreenController : MonoBehaviour
         //SceneManager.LoadScene("Fase01");
         screen3.GetComponent<Animator>().Play("FadeInPerson2");
         screen1.GetComponent<Animator>().Play("FadeOut");
-        levelName = "Fase01";
+        levelName = "Fase31";
         gameObject.GetComponent<AudioSource>().Stop();
         screen3.GetComponent<AudioSource>().Play();
     }
@@ -109,8 +109,8 @@ public class ScreenController : MonoBehaviour
         //SceneManager.LoadScene("Fase06");
         screen3.GetComponent<Animator>().Play("FadeInPerson2");
         screen2.GetComponent<Animator>().Play("FadeOut2");
-        //levelName = "Fase06";
-        levelName = "Fase09";
+        levelName = "Fase06";
+        //levelName = "Fase09";
         gameObject.GetComponent<AudioSource>().Stop();
         screen3.GetComponent<AudioSource>().Play();
     }
@@ -128,11 +128,11 @@ public class ScreenController : MonoBehaviour
     public void StartFase08()
     {
 
-        /*screen3.GetComponent<Animator>().Play("FadeInPerson2");
+        screen3.GetComponent<Animator>().Play("FadeInPerson2");
         screen2.GetComponent<Animator>().Play("FadeOut2");
         levelName = "Fase08";
         gameObject.GetComponent<AudioSource>().Stop();
-        screen3.GetComponent<AudioSource>().Play();*/
+        screen3.GetComponent<AudioSource>().Play();
     }
     public void StartFase09()
     {
@@ -144,6 +144,15 @@ public class ScreenController : MonoBehaviour
         //screen1.GetComponent<Animator>().Play("FadeInPerson");
         levelName = "Fabrica_reciclagem_05";
         SceneManager.LoadScene(levelName);
+    }
+
+    public void StartFase10()
+    {
+        screen3.GetComponent<Animator>().Play("FadeInPerson2");
+        screen2.GetComponent<Animator>().Play("FadeOut2");
+        levelName = "Fase10";
+        gameObject.GetComponent<AudioSource>().Stop();
+        screen3.GetComponent<AudioSource>().Play();
     }
 
     public void MouseInsideGirl()

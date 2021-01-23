@@ -4357,7 +4357,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lixoPrefab
       value: 
-      objectReference: {fileID: 5763919610156526332, guid: 62ed8130a48d4404ebd674c12ddcf683,
+      objectReference: {fileID: 5763919610156526332, guid: 6b7c09b1bcca90b479977e2c3babf5ff,
         type: 3}
     - target: {fileID: -6184815805040317819, guid: 6cc508f266a07ac439bbff9c86950f6c,
         type: 3}

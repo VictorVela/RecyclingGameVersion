@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneControllerNEW : MonoBehaviour
+//ALGORITIMO GERADOR DE CENAS ALEATORIAS
+public class SceneController1 : MonoBehaviour
 {
     public GameObject[] scenes; // PREFABS DAS CENAS
     public GameObject nextScenes; // POSICAO PARA INICIAR NOVA CENA
@@ -29,10 +30,10 @@ public class SceneControllerNEW : MonoBehaviour
     }
 
     // GERA UMA QUANTIDADE ESPECIFICA DE CENAS, PARA SEREM UTILIZADAS NO DECORRER DO GAME
-    public List<GameObject> generateScenes()
+    public List<GameObject> generateScenes()  
     {
         int index = 0;
-        for (int i = 0; i < scenes.Length * 3; i++)
+        for (int i = 0; i < scenes.Length * 3; i++) 
         {
             GameObject obj = Instantiate(scenes[index], transform.position, Quaternion.identity);
             obj.SetActive(false);
@@ -44,7 +45,7 @@ public class SceneControllerNEW : MonoBehaviour
                 index = 0;
             }
         }
-
+        
         return scenesToSpawn;
     }
 
@@ -64,13 +65,28 @@ public class SceneControllerNEW : MonoBehaviour
                 SceneTrigger sceneTrigger = scenesToSpawn[index].gameObject.GetComponentInChildren<SceneTrigger>();
                 sceneTrigger.canGenerate = true;
                 testTrashScene2(scene);
-                if (scenePositionBkp.x != 0 && !gameObject.scene.name.Equals("Fase01") && !gameObject.scene.name.Equals("Fase40"))
+                if(scenePositionBkp.x != 0 && !gameObject.scene.name.Equals("Fase01"))
                 {
                     scenesToSpawn[index].transform.position = scenePositionBkp;
                 }
                 else
                 {
-                    scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 25.927f, baseScene.transform.position.y, baseScene.transform.position.z);
+                    if (baseScene.scene.name.Equals("Fase09"))
+                    {
+                        scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 31.81f, 0.48f, baseScene.transform.position.z);
+                    }
+                    else if (baseScene.scene.name.Equals("Fase10"))
+                    {
+                        scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 29.10f, baseScene.transform.position.y, baseScene.transform.position.z);
+                    }
+                    else if (baseScene.scene.name.Equals("Fase40"))
+                    {
+                        scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 29.10f, baseScene.transform.position.y, baseScene.transform.position.z);
+                    }
+                    else
+                    {
+                        scenesToSpawn[index].transform.position = nextScenes.transform.position;
+                    }
                 }
 
                 //scenePositionBkp = scene.transform;
@@ -86,7 +102,7 @@ public class SceneControllerNEW : MonoBehaviour
 
     private void testTrashScene2(GameObject scene)
     {
-        if (scene.layer.Equals(9) || scene.layer.Equals(11))
+        if (scene.layer.Equals(9) || scene.layer.Equals(11) || scene.layer.Equals(14))
         {
             if (!instancia)
             {
@@ -97,7 +113,7 @@ public class SceneControllerNEW : MonoBehaviour
                 instancia2 = scene;
             }
         }
-
+            
     }
 
     private List<Coin> generateTrash()
@@ -131,6 +147,38 @@ public class SceneControllerNEW : MonoBehaviour
             int index = Random.Range(0, trashsToSpawn.Count - 1);
 
             while (true)
+            {   
+                if (!trashsToSpawn[index].gameObject.activeInHierarchy) // VERIFICA SE A CENA JA ESTA SENDO UTILIZADA
+                {
+                    trashsToSpawn[index].gameObject.SetActive(true);
+                    trashsToSpawn[index].transform.position = transform.position;
+                    trashsToSpawn[index].transform.position = new Vector2(positionTrash.transform.position.x + (i/2), positionTrash.transform.position.y + i * 2);
+                    break;
+                }
+                else
+                {
+                    index = Random.Range(0, trashsToSpawn.Count - 1);
+                }
+            }
+        }
+        if (instancia.layer.Equals(14))
+            ActivateDoubleTrash();
+
+        instancia = instancia2;
+        instancia2 = null;
+    }
+
+    public void ActivateDoubleTrash()
+    {
+
+        GameObject positionTrash = instancia.gameObject.transform.Find("TrashGenerator2").gameObject;
+        int cont = Random.Range(3, 6);
+
+        for (int i = 0; i < cont; i++)
+        {
+            int index = Random.Range(0, trashsToSpawn.Count - 1);
+
+            while (true)
             {
                 if (!trashsToSpawn[index].gameObject.activeInHierarchy) // VERIFICA SE A CENA JA ESTA SENDO UTILIZADA
                 {
@@ -145,9 +193,6 @@ public class SceneControllerNEW : MonoBehaviour
                 }
             }
         }
-
-        instancia = instancia2;
-        instancia2 = null;
     }
 
     public void ResetGenerator()
@@ -158,4 +203,8 @@ public class SceneControllerNEW : MonoBehaviour
             trash.gameObject.SetActive(false);
         }
     }
+
+    
+
+
 }

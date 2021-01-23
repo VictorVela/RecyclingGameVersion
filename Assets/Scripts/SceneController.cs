@@ -65,7 +65,7 @@ public class SceneController : MonoBehaviour
                 SceneTrigger sceneTrigger = scenesToSpawn[index].gameObject.GetComponentInChildren<SceneTrigger>();
                 sceneTrigger.canGenerate = true;
                 testTrashScene2(scene);
-                if(scenePositionBkp.x != 0 && !gameObject.scene.name.Equals("Fase01"))
+                if(scenePositionBkp.x != 0 && !gameObject.scene.name.Equals("Fase01") && !gameObject.scene.name.Equals("Fase11") && !gameObject.scene.name.Equals("Fase21") && !gameObject.scene.name.Equals("Fase31") && !gameObject.scene.name.Equals("Fase40"))
                 {
                     scenesToSpawn[index].transform.position = scenePositionBkp;
                 }
@@ -76,6 +76,10 @@ public class SceneController : MonoBehaviour
                         scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 31.81f, 0.48f, baseScene.transform.position.z);
                     }
                     else if (baseScene.scene.name.Equals("Fase10"))
+                    {
+                        scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 29.10f, baseScene.transform.position.y, baseScene.transform.position.z);
+                    }
+                    else if (baseScene.scene.name.Equals("Fase40"))
                     {
                         scenesToSpawn[index].transform.position = new Vector3(baseScene.transform.position.x + 29.10f, baseScene.transform.position.y, baseScene.transform.position.z);
                     }
